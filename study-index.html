@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>小书虫乐园 - 香港小學二年級英文與數學練習</title>
+<!-- SEO meta -->
+<meta name="description" content="小书虫乐园｜香港小學二年級學習資源｜P2英文語法練習（is/am/are, a/an/the, can等20個單元）＋ P2數學練習（加減法、乘法表、時間、長度、立體圖形等8個單元）｜含互動題目與即時批改">
+<meta name="keywords" content="小书虫乐园, 香港小學二年級, P2英文, P2數學, 小二練習, 小二英文, 小二數學, 語法練習, 中文試卷, 香港小學教育">
+<meta name="author" content="GeeksphereHK">
+<meta property="og:title" content="小书虫乐园 - 香港小學二年級英文與數學練習">
+<meta property="og:description" content="小书虫乐园｜香港小學二年級學習資源｜P2英文語法練習＋P2數學練習｜含互動題目與即時批改">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://geekspherehk.github.io/study-materials/">
+<meta property="og:locale" content="zh_HK">
+<link rel="canonical" href="https://geekspherehk.github.io/study-materials/index.html">
+
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebSite", "name": "小书虫乐园", "alternateName": "GeeksphereHK Study Materials", "description": "小书虫乐园｜香港小學二年級學習資源｜P2英文語法練習（is/am/are, a/an/the, can等20個單元）＋ P2數學練習（加減法、乘法表、時間、長度、立體圖形等8個單元）｜含互動題目與即時批改", "url": "https://geekspherehk.github.io/study-materials/", "inLanguage": "zh-HK", "educationalLevel": "Primary 2 (香港小學二年級)", "audience": {"@type": "EducationalAudience", "educationalRole": "student"}}
+</script>
+<style>
+:root {
+  --sidebar-width: 240px;
+  --bg: #f1f5f9;
+  --card-bg: #fff;
+  --text: #1e293b;
+  --text-mute: #64748b;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --border: #e2e8f0;
+  --sidebar-bg: #2c3e50;
+  --sidebar-text: #bdc3c7;
+  --sidebar-highlight: #3498db;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;display:flex;min-height:100vh}
+/* ── 左侧边栏 ── */
+.sidebar{width:var(--sidebar-width);min-width:var(--sidebar-width);background:var(--sidebar-bg);color:#fff;display:flex;flex-direction:column;position:sticky;top:0;height:100vh;overflow-y:auto;transition:transform .3s ease;z-index:100}
+.sidebar h1{font-size:1.1rem;font-weight:700;padding:20px 16px 12px;border-bottom:1px solid #3d5166;text-align:center}
+.sidebar .category{padding:8px 16px 2px;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#7f8c8d}
+.sidebar a,.sidebar button.side-btn{display:block;width:100%;padding:8px 16px 8px 20px;border:none;background:transparent;color:var(--sidebar-text);cursor:pointer;text-align:left;font-size:0.9rem;text-decoration:none;transition:all 0.15s;border-left:3px solid transparent}
+.sidebar a:hover,.sidebar button.side-btn:hover{background:#34495e;color:#fff;border-left-color:var(--sidebar-highlight)}
+.sidebar a.active,.sidebar button.side-btn.active{background:#34495e;color:#fff;border-left-color:var(--sidebar-highlight);font-weight:600}
+.sidebar .side-btn.sub-btn{padding-left:32px;font-size:0.82rem;border-left-color:transparent}
+.sidebar .side-btn.sub-btn:hover,.sidebar .side-btn.sub-btn.active{border-left-color:#e67e22}
+.sidebar .side-btn.sub-btn.active{background:#34495e;color:#f39c12;font-weight:600}
+.sidebar-details{width:100%}
+.sidebar-details summary.side-summary{padding:8px 16px 8px 20px;color:var(--sidebar-text);cursor:pointer;font-size:0.88rem;list-style:none;display:flex;align-items:center;border-left:3px solid transparent;user-select:none;transition:all 0.15s}
+.sidebar-details summary.side-summary:hover{background:#34495e;color:#fff}
+.sidebar-details summary.side-summary::before{content:"▶";margin-right:6px;font-size:0.7rem;transition:transform 0.2s}
+.sidebar-details[open] summary.side-summary::before{content:"▼"}
+.sidebar .nav-gap{height:1px;background:#3d5166;margin:6px 16px}
+
+.section{display:none}
+.section.active{display:block}
+/* ── 顶部导航栏 (移动端) ── */
+.top-nav{display:none;position:fixed;top:0;left:0;right:0;height:56px;background:var(--sidebar-bg);color:#fff;z-index:200;align-items:center;padding:0 16px;justify-content:space-between}
+.top-nav .menu-btn{background:transparent;border:none;color:#fff;font-size:1.5rem;cursor:pointer;padding:8px;border-radius:8px;transition:background .15s}
+.top-nav .menu-btn:hover{background:#34495e}
+.top-nav .nav-title{font-size:1rem;font-weight:700}
+.top-nav .spacer{width:44px}
+
+/* 移动端遮罩 */
+.mobile-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:99;opacity:0;transition:opacity .3s}
+.mobile-overlay.show{opacity:1}
+
+/* ── 右侧主内容 ── */
+.main-content{flex:1;padding:24px;max-width:760px;margin:0 auto;width:100%}
+
+/* 桌面端主体内容在移动端加个顶部间距 */
+@media (max-width:768px){
+  .main-content{padding:76px 16px 24px}
+}
+
+/* 在移动端隐藏sidebar */
+@media (max-width:768px){
+  .sidebar{position:fixed;top:56px;left:0;height:calc(100vh - 56px);transform:translateX(-100%);z-index:99;width:80vw;min-width:280px}
+  .sidebar.open{transform:translateX(0)}
+  .top-nav{display:flex}
+}
+
+/* 搜索区 */
+.search-section{background:var(--card-bg);border-radius:12px;padding:20px 24px;border:1px solid var(--border);margin-bottom:24px}
+.search-box{display:flex;gap:8px}
+.search-box input{flex:1;padding:10px 16px;border:1.5px solid var(--border);border-radius:8px;font-size:1rem;outline:none;transition:border-color .2s}
+.search-box input:focus{border-color:var(--primary)}
+.search-btn{padding:10px 20px;background:var(--primary);color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:0.95rem;transition:background .15s;white-space:nowrap}
+.search-btn:hover{background:var(--primary-hover)}
+
+/* 搜索结果 */
+.search-results{display:none;background:var(--card-bg);border-radius:12px;padding:20px 24px;border:1px solid var(--border);margin-bottom:24px}
+.search-results.show{display:block}
+.search-results h3{font-size:1rem;color:var(--text-mute);margin-bottom:12px}
+.search-results .result-item{padding:10px 0;border-bottom:1px solid var(--border)}
+.search-results .result-item:last-child{border-bottom:none}
+.search-results .result-item a{color:var(--primary);text-decoration:none;font-size:0.95rem;font-weight:600}
+.search-results .result-item a:hover{text-decoration:underline}
+.search-results .result-item .result-meta{font-size:0.8rem;color:var(--text-mute);margin-top:2px}
+
+/* 快速入口卡片 */
+.quick-cards{display:flex;gap:12px;margin-bottom:24px;flex-wrap:wrap}
+.quick-card{display:flex;align-items:center;gap:10px;background:var(--card-bg);border:2px solid var(--border);border-radius:12px;padding:14px 24px;text-decoration:none;color:var(--text);font-size:1rem;font-weight:600;transition:all .15s;flex:1;min-width:130px;justify-content:center}
+.quick-card:hover{border-color:var(--primary);box-shadow:0 4px 12px rgba(37,99,235,0.1);transform:translateY(-2px)}
+.quick-card.active{border-color:var(--primary);background:#eff6ff;color:var(--primary)}
+.quick-card .qc-icon{font-size:1.5rem}
+.quick-card .qc-label{font-size:0.95rem}
+
+/* 分类标题 */
+.section-title{font-size:1.1rem;margin-bottom:16px;color:var(--text);border-bottom:2px solid var(--border);padding-bottom:8px}
+
+/* 全部资料卡片网格 */
+.cards-grid{background:var(--card-bg);border-radius:12px;padding:20px 24px;border:1px solid var(--border)}
+.cards-grid .section-title{margin-top:0;margin-bottom:16px}
+.card-item{display:flex;align-items:center;gap:16px;padding:14px 12px;border-radius:8px;transition:all .15s;cursor:pointer;border-bottom:1px solid var(--border)}
+.card-item:last-child{border-bottom:none}
+.card-item:hover{background:#f8fafc;box-shadow:0 2px 8px rgba(0,0,0,0.06);transform:translateX(2px)}
+.card-item .card-icon{font-size:1.5rem;width:48px;text-align:center;flex-shrink:0}
+.card-item .card-info{flex:1;min-width:0}
+.card-item .card-title{font-weight:600;color:var(--primary);text-decoration:none;font-size:0.95rem}
+.card-item .card-title:hover{text-decoration:underline}
+.card-item .card-meta{font-size:0.8rem;color:var(--text-mute);margin-top:2px}
+.card-item .card-action{flex-shrink:0}
+.card-item .card-btn{display:inline-block;padding:6px 14px;background:var(--primary);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:0.82rem;text-decoration:none;transition:background .15s}
+.card-item .card-btn:hover{background:var(--primary-hover)}
+
+/* 首页介绍 Banner */
+.hero-section{background:#fff;border-radius:16px;padding:36px 28px 32px;margin-bottom:24px;color:#1e293b;text-align:center;position:relative;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.04),0 4px 20px rgba(0,0,0,0.03);border:1px solid rgba(0,0,0,0.04)}
+.hero-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 25% 15%,#e0e7ff 0%,transparent 60%),radial-gradient(ellipse at 75% 85%,#dbeafe 0%,transparent 60%);border-radius:16px;pointer-events:none}
+.hero-title{font-size:1.8rem;font-weight:800;margin-bottom:6px;position:relative;z-index:1;letter-spacing:0.5px;color:#1e293b}
+.hero-icon{font-size:2.8rem;display:flex;justify-content:center;gap:6px;margin-bottom:10px;position:relative;z-index:1}
+.hero-icon span{display:inline-block;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.1))}
+.hero-bookworm{display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;z-index:1;margin-bottom:6px;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.06))}
+.hero-bookworm pre{font-family:"Courier New",monospace;font-size:0.75rem;line-height:1.3;letter-spacing:1px;color:#64748b;margin:0;padding:10px 20px;background:rgba(241,245,249,0.6);border-radius:12px;text-shadow:none}
+.hero-bookworm .worm-label{font-size:1rem;font-weight:700;color:#475569;display:block;margin-top:4px}
+.hero-subtitle{font-size:1.05rem;margin-bottom:4px;position:relative;z-index:1;color:#475569}
+.hero-desc{font-size:0.85rem;position:relative;z-index:1;color:#94a3b8}
+
+/* 响应式调整 */
+@media(max-width:768px){
+  .hero-section{padding:24px 20px}
+  .hero-title{font-size:1.3rem}
+  .hero-icon{font-size:2.2rem}
+  .hero-bookworm{font-size:1.1rem}
+}
+/* ── 语法练习样式 ── */
+.gram-item{padding:16px;border:1px solid var(--border);border-radius:10px;margin-bottom:12px;background:#fafbfc;transition:all .15s}
+.gram-item:hover{border-color:#cbd5e1;background:#f1f5f9}
+.gram-item .sentence{font-size:1.1rem;margin-bottom:12px;color:var(--text);font-weight:500}
+.gram-item .options{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.gram-item .opt-btn{padding:8px 24px;font-size:0.95rem;min-width:48px;min-height:44px;border:2px solid var(--border);border-radius:8px;background:#fff;color:var(--text);cursor:pointer;transition:all .15s;font-weight:500}
+.gram-item .opt-btn:hover{border-color:var(--primary);color:var(--primary);background:#eff6ff}
+.gram-item .opt-btn.selected{border-color:var(--primary);background:#eff6ff;color:var(--primary);font-weight:700}
+.gram-item .opt-btn.correct{border-color:#27ae60;background:#e6f7ed;color:#1e8449}
+.gram-item .opt-btn.wrong{border-color:#e74c3c;background:#fdedec;color:#c0392b}
+.gram-item .opt-btn.show-correct{border-color:#27ae60;background:#e6f7ed;color:#1e8449;opacity:0.7}
+.gram-item .result-icon{font-size:1.5rem;margin-left:12px}
+@media (max-width:480px){.gram-item .opt-btn{padding:8px 24px;font-size:0.95rem;min-width:48px;min-height:44px}}
+/* ── 语法练习样式 ── */
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9VYY1QD34J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9VYY1QD34J');
+</script>
+</head>
+<body>
+
+<!-- ── 顶部导航栏 ── -->
+<nav class="top-nav">
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <span class="nav-title">🐛 小书虫乐园</span>
+  <span class="spacer"></span>
+</nav>
+
+<!-- ── 移动端遮罩 ── -->
+<div class="mobile-overlay" id="mobileOverlay" onclick="closeMenu()"></div>
+
+<!-- ── 左侧边栏 ── -->
+<!-- ── 左侧边栏 ── -->
+<div class="sidebar" id="sidebar">
+  <h1>🐛 小书虫乐园</h1>
+  <div class="nav-gap"></div>
+  <div class="category">👶 小二 · 📖 英文</div>
+  <details class="sidebar-details" open>
+    <summary class="side-summary">🔤 P2 英文知识点 (20个)</summary>
+  <a href="p2-unit-1.html" class="side-btn sub-btn">Unit 1 - is/am/are</a>
+    <a href="p2-unit-2.html" class="side-btn sub-btn">Unit 2 - a/an/the</a>
+    <a href="p2-unit-3.html" class="side-btn sub-btn">Unit 3 - can</a>
+    <a href="p2-unit-4.html" class="side-btn sub-btn">Unit 4 - and/but</a>
+    <a href="p2-unit-5.html" class="side-btn sub-btn">Unit 5 - this/that/these/those</a>
+    <a href="p2-unit-6.html" class="side-btn sub-btn">Unit 6 - in/on/under</a>
+    <a href="p2-unit-7.html" class="side-btn sub-btn">Unit 7 - Prepositions of place</a>
+    <a href="p2-unit-8.html" class="side-btn sub-btn">Unit 8 - Simple present tense</a>
+    <a href="p2-unit-9.html" class="side-btn sub-btn">Unit 9 - do/does</a>
+    <a href="p2-unit-10.html" class="side-btn sub-btn">Unit 10 - Common expressions</a>
+    <a href="p2-unit-11.html" class="side-btn sub-btn">Unit 11 - I/me/my...</a>
+    <a href="p2-unit-12.html" class="side-btn sub-btn">Unit 12 - Nouns</a>
+    <a href="p2-unit-13.html" class="side-btn sub-btn">Unit 13 - Ordinal numbers</a>
+    <a href="p2-unit-14.html" class="side-btn sub-btn">Unit 14 - Adjectives</a>
+    <a href="p2-unit-15.html" class="side-btn sub-btn">Unit 15 - Opposites</a>
+    <a href="p2-unit-16.html" class="side-btn sub-btn">Unit 16 - Question words: Wh-</a>
+    <a href="p2-unit-17.html" class="side-btn sub-btn">Unit 17 - Question words: How</a>
+    <a href="p2-unit-18.html" class="side-btn sub-btn">Unit 18 - Imperatives</a>
+    <a href="p2-unit-19.html" class="side-btn sub-btn">Unit 19 - Comprehension(1): Rules</a>
+    <a href="p2-unit-20.html" class="side-btn sub-btn">Unit 20 - Comprehension(2): Letters</a>
+  </details>
+  <div class="nav-gap"></div>
+  <div class="category">👶 小二 · 🛠️ 学习工具</div>
+  <details class="sidebar-details" open>
+    <summary class="side-summary">📚 学习工具</summary>
+    <a href="p2-vocab.html" class="side-btn sub-btn">📚 词汇闪卡 Flashcards</a>
+    <a href="p2-mental-math.html" class="side-btn sub-btn">🧮 口算题卡</a>
+    <a href="p2-ocr-vocab.html" class="side-btn sub-btn">📷 拍照识字闪卡 OCR</a>
+  </details>
+  <div class="nav-gap"></div>
+  <div class="category">👶 小二 · 🧮 數學</div>
+  <details class="sidebar-details" open>
+    <summary class="side-summary">🔢 P2 數學單元 (7個)</summary>
+    <a href="p2-math-unit1.html" class="side-btn sub-btn">Unit 1 - 1000以內的數</a>
+    <a href="p2-math-unit2.html" class="side-btn sub-btn">Unit 2 - 加法和減法</a>
+    <a href="p2-math-unit3.html" class="side-btn sub-btn">Unit 3 - 乘法</a>
+    <a href="p2-math-unit4.html" class="side-btn sub-btn">Unit 4 - 時間與日曆</a>
+    <a href="p2-math-unit5.html" class="side-btn sub-btn">Unit 5 - 長度和距離</a>
+    <a href="p2-math-unit6.html" class="side-btn sub-btn">Unit 6 - 立體圖形</a>
+    <a href="p2-math-unit7.html" class="side-btn sub-btn">Unit 7 - 統計圖表</a>
+  </details>
+  <div class="nav-gap"></div>
+  <div class="category">👶 小二 · 📋 评估试卷</div>
+  <details class="sidebar-details" open>
+    <summary class="side-summary">📋 评估试卷下载 (新!)</summary>
+    <a href="p2-assessment-papers.html" class="side-btn sub-btn">📋 评估试卷下载大厅</a>
+  </details>
+</div>
+
+<!-- ── 右侧主内容 ── -->
+<div class="main-content">
+<main>
+
+  <!-- 首页介绍 Banner -->
+    <div class="hero-section">
+    <div class="hero-icon">📚🐛</div>
+    <h1 class="hero-title">小书虫乐园</h1>
+    <p class="hero-subtitle">✨ 一站式全科学习资料查阅与练习平台 ✨</p>
+    <p class="hero-desc">持续更新香港小学二年级英文、数学学习资源 · 所有内容免费使用</p>
+  </div>
+
+    <!-- 搜索区 -->
+    <div class="search-section">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="输入科目、知识点或单元名称搜索…" oninput="doSearch(this.value)">
+        <button class="search-btn" onclick="doSearch(document.getElementById('searchInput').value)">🔍 搜索</button>
+      </div>
+    </div>
+
+    <!-- 词汇闪卡入口 -->
+    <div style="text-align:right;margin-bottom:8px;">
+      <a href="p2-vocab.html" style="display:inline-flex;align-items:center;gap:4px;font-size:0.85rem;color:#92400e;background:#fef3c7;padding:6px 14px;border-radius:20px;text-decoration:none;font-weight:600;transition:all .15s;">📚 词汇闪卡 Flashcards &rarr;</a>
+    </div>
+
+    <!-- 快速入口：学科卡片 -->
+    <div class="quick-cards">
+      <a href="#" onclick="filterBySubject('all')" class="quick-card active" data-subject="all">
+        <span class="qc-icon">📌</span>
+        <span class="qc-label">全部</span>
+      </a>
+      <a href="#" onclick="filterBySubject('english')" class="quick-card">
+        <span class="qc-icon">📖</span>
+        <span class="qc-label">英文</span>
+      </a>
+      <a href="#" onclick="filterBySubject('math')" class="quick-card">
+        <span class="qc-icon">🧮</span>
+        <span class="qc-label">數學</span>
+      </a>
+    </div>
+
+    <!-- 搜索结果区 -->
+    <div id="searchResults" class="search-results"></div>
+
+    <!-- 全部资料卡片列表（默认显示） -->
+    <div id="allCards" class="cards-grid">
+      <h2 class="section-title">📖 全部学习单元</h2>
+    </div>
+
+    <!-- 背单词 (隐藏，点击侧边栏切换) -->
+    <div id="vocab" class="section">
+      <div style="background:var(--card-bg);border-radius:12px;padding:24px;border:1px solid var(--border);text-align:center">
+        <h2 style="margin-bottom:16px;">📝 背单词</h2>
+        <p style="font-size:1.4rem;font-weight:700;margin-bottom:8px;" id="word-en"></p>
+        <p style="font-size:1.2rem;color:var(--text-mute);margin-bottom:16px;" id="word-zh"></p>
+        <input type="text" id="word-input" style="padding:8px 16px;font-size:1.1rem;border:1.5px solid var(--border);border-radius:8px;outline:none;text-align:center;margin-bottom:12px;" placeholder="输入英文" onkeydown="if(event.key==='Enter') checkVocab()">
+        <div style="margin-top:8px;">
+          <span id="vocab-icon" style="font-size:2rem;display:block;margin-bottom:8px;"> </span>
+          <button onclick="checkVocab()" style="padding:10px 24px;background:var(--primary);color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:1rem;margin-right:8px;">✓ 检查</button>
+          <button onclick="nextVocab()" style="padding:10px 24px;background:var(--primary);color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:1rem;">→ 下一个</button>
+        </div>
+      </div>
+    </div>
+
+<!-- 不蒜子访问统计 -->
+<script async defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div style="text-align:center;font-size:0.75rem;color:#94a3b8;padding:8px 0">
+  本站总访问量 <span id="busuanzi_value_site_pv"></span> 次 ·
+  访客数 <span id="busuanzi_value_site_uv"></span> 人 ·
+  当前页面浏览量 <span id="busuanzi_value_page_pv"></span> 次
+</div>
+  </div>
+
+</main>
+</div> <!-- /main-content -->
+
+<script>
+// ── 切换页面 ──────────────────────────────────────
+function show(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  const target = document.getElementById(id);
+  if (target) target.classList.add('active');
+  document.querySelectorAll('.side-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll(`.side-btn[onclick*="'${id}'"], .side-btn[href*="${id}"]`).forEach(b => b.classList.add('active'));
+}
+
+// ── 口算 ──────────────────────────────────────────
+const questions = [];
+let answers = [];
+
+function randInt(a, b) { return Math.floor(Math.random() * (b - a + 1)) + a; }
+
+function genQuestions() {
+  const qaGrid = document.getElementById('qaGrid');
+  qaGrid.innerHTML = '';
+  questions.length = 0;
+  answers.length = 0;
+  for (let i = 0; i < 18; i++) {
+    let a, b, op, q, ans;
+    let r = Math.floor(Math.random() * 3);
+    if (r === 0) { a = randInt(1, 12); b = randInt(1, 12); op = '×'; ans = a * b; q = a + ' ' + op + ' ' + b + ' = ?'; }
+    else if (r === 1) { a = randInt(1, 12) * randInt(1, 12); b = randInt(2, 12); ans = Math.round(a / b); q = a + ' ÷ ' + b + ' = ?'; while (a % b !== 0) { a = randInt(1, 12) * randInt(1, 12); b = randInt(2, 12); ans = a / b; q = a + ' ÷ ' + b + ' = ?'; } }
+    else { a = randInt(1, 20); b = randInt(1, 20); op = Math.random() > 0.5 ? '+' : '−'; ans = op === '+' ? a + b : a - b; q = a + ' ' + op + ' ' + b + ' = ?'; }
+    questions.push({ q, opts: [] });
+    answers.push({ ans, i });
+    const div = document.createElement('div');
+    div.className = 'qa-item';
+    div.id = 'qa-' + i;
+    div.innerHTML = '<span>' + q + '</span> <input type="number" id="input-' + i + '" placeholder="?"/>';
+    qaGrid.appendChild(div);
+  }
+}
+function checkAnswers() {
+  let cr = 0;
+  answers.forEach(({ ans, i }, idx) => {
+    const inp = document.getElementById('input-' + i);
+    const val = parseInt(inp.value);
+    const item = document.getElementById('qa-' + i);
+    item.classList.remove('correct', 'wrong');
+    if (val === ans) { item.classList.add('correct'); cr++; }
+    else { item.classList.add('wrong'); }
+  });
+  const t = answers.length;
+  const bar = document.getElementById('result-bar');
+  bar.textContent = cr + ' / ' + t + ' 正确（' + Math.round(cr / t * 100) + '%）';
+  bar.style.color = cr === t ? '#27ae60' : cr / t >= 0.8 ? '#e67e22' : '#e74c3c';
+}
+
+// ── 背单词 ──────────────────────────────────────────
+const vocab = [
+  { en: 'apple', zh: '苹果' },
+  { en: 'banana', zh: '香蕉' },
+  { en: 'cat', zh: '猫' },
+  { en: 'dog', zh: '狗' },
+  { en: 'elephant', zh: '大象' },
+  { en: 'fish', zh: '鱼' },
+  { en: 'giraffe', zh: '长颈鹿' },
+  { en: 'house', zh: '房子' },
+  { en: 'ice cream', zh: '冰淇淋' },
+  { en: 'juice', zh: '果汁' },
+  { en: 'kite', zh: '风筝' },
+  { en: 'lemon', zh: '柠檬' },
+  { en: 'monkey', zh: '猴子' },
+  { en: 'notebook', zh: '笔记本' },
+  { en: 'orange', zh: '橙子' },
+  { en: 'piano', zh: '钢琴' },
+  { en: 'queen', zh: '女王' },
+  { en: 'rabbit', zh: '兔子' },
+  { en: 'sun', zh: '太阳' },
+  { en: 'tiger', zh: '老虎' },
+  { en: 'umbrella', zh: '雨伞' },
+  { en: 'violin', zh: '小提琴' },
+  { en: 'watermelon', zh: '西瓜' },
+  { en: 'xylophone', zh: '木琴' },
+  { en: 'yogurt', zh: '酸奶' },
+  { en: 'zebra', zh: '斑马' }
+];
+let currentVocab = -1;
+
+function renderCard() {
+  currentVocab = randInt(0, vocab.length - 1);
+  const v = vocab[currentVocab];
+  document.getElementById('word-en').textContent = v.en;
+  document.getElementById('word-zh').textContent = v.zh;
+  document.getElementById('word-input').value = '';
+  document.getElementById('word-input').dataset.answer = v.en.toLowerCase();
+  document.getElementById('word-input').focus();
+  document.getElementById('word-input').removeAttribute('readonly');
+}
+function checkVocab() {
+  const inp = document.getElementById('word-input');
+  const val = inp.value.trim().toLowerCase();
+  const ans = inp.dataset.answer;
+  const icon = document.getElementById('vocab-icon');
+  if (val === ans) { icon.textContent = '✅'; inp.setAttribute('readonly', true); }
+  else { icon.textContent = '❌'; inp.setAttribute('readonly', true); }
+}
+function nextVocab() {
+  renderCard();
+  document.getElementById('vocab-icon').textContent = ' ';
+}
+
+// ── 搜索功能 ──────────────────────────────────────────
+const searchData = [
+  { name: 'P2 Unit 1 - is/am/are', url: 'p2-unit-1.html', subject: '英文', type: '知识点' },
+  { name: 'P2 Unit 2 - a/an/the', url: 'p2-unit-2.html', subject: '英文', type: '知识点' },
+  { name: 'P2 Unit 3 - can', url: 'p2-unit-3.html', subject: '英文', type: '知识点' },
+  { name: 'P2 Unit 4 - and/but', url: 'p2-unit-4.html', subject: '英文', type: '知识点' },
+  { name: 'P2 Unit 5 - this/that/these/those', url: 'p2-unit-5.html', subject: '英文', type: '知识点' },
+  { name: 'P2 Unit 6 - in/on/under', url: 'p2-unit-6.html', subject: '英文', type: '知识点' },
+  { name: 'P2 Unit 7 - Prepositions of place', url: 'p2-unit-7.html', subject: '英文', type: '知识点' },
+  { name: 'P2 Unit 8 - Simple present tense', url: 'p2-unit-8.html', subject: '英文', type: '知识点' },
+  { name: 'P2 Unit 9 - do/does', url: 'p2-unit-9.html', subject: '英文', type: '知识点' },
+  { name: 'P2 Unit 10 - Common expressions', url: 'p2-unit-10.html', subject: '英文', type: '知识点' },
+  { name: 'P2 Unit 11 - I/me/my/mine', url: 'p2-unit-11.html', subject: '英文', type: '知识点' },
+  { name: 'P2 Unit 12 - Nouns', url: 'p2-unit-12.html', subject: '英文', type: '知识点' },
+  { name: 'P2 Unit 13 - Ordinal numbers', url: 'p2-unit-13.html', subject: '英文', type: '知识点' },
+  { name: 'P2 Unit 14 - Adjectives', url: 'p2-unit-14.html', subject: '英文', type: '知识点' },
+  { name: 'P2 Unit 15 - Opposites', url: 'p2-unit-15.html', subject: '英文', type: '知识点' },
+  { name: 'P2 Unit 16 - Question words: Wh-', url: 'p2-unit-16.html', subject: '英文', type: '知识点' },
+  { name: 'P2 Unit 17 - Question words: How', url: 'p2-unit-17.html', subject: '英文', type: '知识点' },
+  { name: 'P2 Unit 18 - Imperatives', url: 'p2-unit-18.html', subject: '英文', type: '知识点' },
+  { name: 'P2 Unit 19 - Comprehension(1): Rules', url: 'p2-unit-19.html', subject: '英文', type: '知识点' },
+  { name: 'P2 Unit 20 - Comprehension(2): Letters', url: 'p2-unit-20.html', subject: '英文', type: '知识点' },
+  { name: 'P2 Math Unit 1 - 1000以內的數', url: 'p2-math-unit1.html', subject: '數學', type: '知识点' },
+  { name: 'P2 Math Unit 2 - 加法和減法', url: 'p2-math-unit2.html', subject: '數學', type: '知识点' },
+  { name: 'P2 Math Unit 3 - 乘法', url: 'p2-math-unit3.html', subject: '數學', type: '知识点' },
+  { name: 'P2 Math Unit 4 - 時間與日曆', url: 'p2-math-unit4.html', subject: '數學', type: '知识点' },
+  { name: 'P2 Math Unit 5 - 長度和距離', url: 'p2-math-unit5.html', subject: '數學', type: '知识点' },
+  { name: 'P2 Math Unit 6 - 立體圖形', url: 'p2-math-unit6.html', subject: '數學', type: '知识点' },
+  { name: 'P2 Math Unit 7 - 統計圖表', url: 'p2-math-unit7.html', subject: '數學', type: '知识点' },
+  { name: 'P2 Unit 20 - Comprehension(2): Letters', url: 'p2-unit-20.html', subject: '英文', type: '知识点' },
+  { name: '英文综合练习试卷', url: 'p2-english-comprehensive.html', subject: '英文', type: '试卷' },
+  { name: '英文综合练习随机出题', url: 'p2-english-random-exam.html', subject: '英文', type: '试卷' },
+  { name: '英文综合练习随机生成', url: 'p2-english-random-exam.html', subject: '英文', type: '试卷' },
+  { name: '中文综合练习随机出题', url: 'p2-chinese-exam.html', subject: '中文', type: '试卷' },
+  { name: '评估试卷下载大厅', url: 'p2-assessment-papers.html', subject: '工具', type: '试卷' },
+  { name: '小测6复习(L1)', url: 'quiz-6-revision.html', subject: '英文', type: '复习' },
+  { name: '小测6复习(L2)', url: 'quiz-6-revision-level2.html', subject: '英文', type: '复习' },
+  { name: '拍照识字闪卡 OCR', url: 'p2-ocr-vocab.html', subject: '工具', type: '学习工具' },
+];
+
+function doSearch(query) {
+  const q = query.toLowerCase().trim();
+  const results = document.getElementById('searchResults');
+  const allCards = document.getElementById('allCards');
+  
+  if (!q) {
+    results.classList.remove('show');
+    allCards.style.display = 'block';
+    return;
+  }
+  
+  const matches = searchData.filter(item =>
+    item.name.toLowerCase().includes(q) ||
+    item.subject.includes(q) ||
+    item.type.includes(q)
+  );
+  
+  if (matches.length === 0) {
+    results.innerHTML = '<h3>🔍 未找到相关结果</h3>';
+    results.classList.add('show');
+    allCards.style.display = 'none';
+    return;
+  }
+  
+  let html = '<h3>🔍 搜索结果 (' + matches.length + '项)</h3>';
+  matches.forEach(item => {
+    html += '<div class="result-item">';
+    html += '<a href="' + item.url + '">' + item.name + '</a>';
+    html += '<div class="result-meta">' + item.subject + ' · ' + item.type + '</div>';
+    html += '</div>';
+  });
+  results.innerHTML = html;
+  results.classList.add('show');
+  allCards.style.display = 'none';
+}
+
+// ── 生成全部卡片列表 ──────────────────────────
+function renderAllCards(filter) {
+  const container = document.getElementById('allCards');
+  const filtered = filter ? searchData.filter(item => item.subject === filter) : searchData;
+  const subjectLabel = filter === '英文' ? '📖 英文' : filter === '數學' ? '🧮 數學' : '📖 全部';
+  let html = '<h2 class="section-title">' + subjectLabel + ' 学习单元</h2>';
+  filtered.forEach(item => {
+    const icon = '📖';
+    html += '<div class="card-item">';
+    html += '<div class="card-icon">' + icon + '</div>';
+    html += '<div class="card-info">';
+    html += '<a href="' + item.url + '" class="card-title">' + item.name + '</a>';
+    html += '<div class="card-meta">' + item.subject + ' · ' + item.type + '</div>';
+    html += '</div>';
+    html += '<div class="card-action"><a href="' + item.url + '" class="card-btn">前往</a></div>';
+    html += '</div>';
+  });
+  container.innerHTML = html;
+}
+
+// ── 快速筛选 ──────────────────────────────────
+function filterBySubject(subject) {
+  document.querySelectorAll('.quick-card').forEach(c => c.classList.remove('active'));
+  const btn = document.querySelector(`.quick-card[onclick*="'${subject}'"]`);
+  if (btn) btn.classList.add('active');
+  if (subject === 'english') {
+    renderAllCards('英文');
+  } else if (subject === 'math') {
+    renderAllCards('數學');
+  } else {
+    renderAllCards();
+  }
+}
+
+// ── 移动端菜单 ──────────────────────────────────
+function toggleMenu() {
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('mobileOverlay');
+  sidebar.classList.toggle('open');
+  overlay.classList.toggle('show');
+}
+
+function closeMenu() {
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('mobileOverlay').classList.remove('show');
+}
+
+// ── 初始化 ──────────────────────────────────────
+renderCard();
+  renderAllCards();
+</script>
+</body>
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小书虫 AI 视频工坊 — 兒童英語跟讀視頻 × AI 繪本動畫</title>
+<meta name="description" content="小书虫 AI 视频工坊｜為香港小學生提供 AI 英語跟讀視頻製作、繪本動畫、雅思口語跟讀等教育視頻服務。上傳素材，我們幫你生成專業視頻。">
+<meta name="keywords" content="小书虫, AI视频, 英语跟读, 绘本动画, 儿童英语, 香港小学, 雅思口语, 教育视频">
+<meta property="og:title" content="小书虫 AI 视频工坊">
+<meta property="og:description" content="兒童英語跟讀視頻 × AI 繪本動畫 — 上傳素材，AI 幫你生成專業教育視頻">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_HK">
+<link rel="canonical" href="https://xiaoshuchong.com/">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;background:#0f172a;color:#e2e8f0;line-height:1.7;-webkit-font-smoothing:antialiased}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(15,23,42,0.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.06)}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 24px}
+.nav-logo{font-size:1.15rem;font-weight:800;color:#fff;text-decoration:none;display:flex;align-items:center;gap:8px}
+.nav-logo span{background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{color:#94a3b8;text-decoration:none;font-size:0.9rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:#60a5fa}
+.nav-cta{padding:8px 20px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);border:none;border-radius:8px;color:#fff;font-size:0.85rem;font-weight:600;cursor:pointer;transition:transform .2s,box-shadow .2s;text-decoration:none}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(59,130,246,0.35)}
+.mobile-menu-btn{display:none;background:transparent;border:none;color:#fff;font-size:1.5rem;cursor:pointer;padding:4px}
+@media(max-width:768px){
+  .mobile-menu-btn{display:block}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(15,23,42,0.96);flex-direction:column;padding:16px 24px;gap:12px;border-bottom:1px solid rgba(255,255,255,0.06)}
+  .nav-links.open{display:flex}
+}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 24px 60px;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.hero-bg .orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:0.25}
+.hero-bg .orb:nth-child(1){width:500px;height:500px;background:#3b82f6;top:-120px;left:-100px;animation:float1 8s ease-in-out infinite}
+.hero-bg .orb:nth-child(2){width:400px;height:400px;background:#8b5cf6;bottom:-80px;right:-60px;animation:float2 10s ease-in-out infinite}
+.hero-bg .orb:nth-child(3){width:300px;height:300px;background:#f59e0b;top:50%;left:50%;transform:translate(-50%,-50%);opacity:0.08}
+@keyframes float1{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,-30px)}}
+@keyframes float2{0%,100%{transform:translate(0,0)}50%{transform:translate(-30px,40px)}}
+.hero-content{position:relative;z-index:1;max-width:720px}
+.hero-badge{display:inline-block;padding:6px 16px;background:rgba(59,130,246,0.15);border:1px solid rgba(59,130,246,0.25);border-radius:20px;font-size:0.8rem;color:#93c5fd;margin-bottom:20px}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;line-height:1.2;margin-bottom:16px;color:#fff}
+.hero h1 .gradient{background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{font-size:1.1rem;color:#94a3b8;max-width:560px;margin:0 auto 32px}
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.hero-btns .btn-primary{padding:14px 32px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);border:none;border-radius:10px;color:#fff;font-size:1rem;font-weight:600;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.hero-btns .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(59,130,246,0.4)}
+.hero-btns .btn-secondary{padding:14px 32px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:10px;color:#e2e8f0;font-size:1rem;font-weight:500;cursor:pointer;text-decoration:none;transition:background .2s}
+.hero-btns .btn-secondary:hover{background:rgba(255,255,255,0.1)}
+section{padding:80px 24px;max-width:1100px;margin:0 auto}
+.section-label{font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;color:#64748b;margin-bottom:8px}
+.section-title{font-size:clamp(1.5rem,3vw,2rem);font-weight:700;color:#fff;margin-bottom:12px}
+.section-desc{color:#94a3b8;max-width:600px;margin-bottom:40px;font-size:0.95rem}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.feature-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:28px 24px;transition:all .3s;position:relative;overflow:hidden}
+.feature-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--acclr),transparent);opacity:0;transition:opacity .3s}
+.feature-card:hover::before{opacity:1}
+.feature-card:hover{background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);transform:translateY(-3px)}
+.feature-card .icon{font-size:2rem;margin-bottom:12px;display:block}
+.feature-card h3{font-size:1rem;font-weight:600;color:#fff;margin-bottom:6px}
+.feature-card p{font-size:0.85rem;color:#94a3b8;line-height:1.6}
+.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.video-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:14px;overflow:hidden;transition:all .3s;cursor:pointer}
+.video-card:hover{background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);transform:translateY(-3px)}
+.video-card video{width:100%;display:block;background:#000;aspect-ratio:16/9;object-fit:contain}
+.video-card .info{padding:14px 16px}
+.video-card .info h4{font-size:0.9rem;font-weight:600;color:#fff;margin-bottom:4px}
+.video-card .info p{font-size:0.8rem;color:#94a3b8}
+.steps{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;counter-reset:step}
+.step{flex:1;min-width:200px;max-width:300px;text-align:center;padding:28px 20px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:14px;position:relative}
+.step .num{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#3b82f6,#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:700;color:#fff;margin:0 auto 12px}
+.step h3{font-size:0.95rem;font-weight:600;color:#fff;margin-bottom:6px}
+.step p{font-size:0.82rem;color:#94a3b8}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.pricing-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:32px 24px;text-align:center;transition:all .3s;position:relative}
+.pricing-card.featured{background:rgba(59,130,246,0.08);border-color:rgba(59,130,246,0.3)}
+.pricing-card.featured .badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);padding:4px 16px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);border-radius:20px;font-size:0.75rem;font-weight:600;color:#fff}
+.pricing-card h3{font-size:1rem;font-weight:600;color:#fff;margin-bottom:4px}
+.pricing-card .price{font-size:2rem;font-weight:800;color:#fff;margin:12px 0 6px}
+.pricing-card .price span{font-size:0.9rem;font-weight:400;color:#64748b}
+.pricing-card .desc{font-size:0.85rem;color:#94a3b8;margin-bottom:20px}
+.pricing-card ul{list-style:none;text-align:left;margin-bottom:24px}
+.pricing-card ul li{padding:6px 0;font-size:0.85rem;color:#cbd5e1;display:flex;align-items:center;gap:8px}
+.pricing-card ul li::before{content:'✓';color:#3b82f6;font-weight:700}
+.pricing-card .btn{padding:12px 28px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);border:none;border-radius:8px;color:#fff;font-size:0.9rem;font-weight:600;cursor:pointer;text-decoration:none;display:inline-block;transition:transform .2s,box-shadow .2s}
+.pricing-card .btn:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(59,130,246,0.3)}
+.pricing-card .btn-outline{padding:12px 28px;background:transparent;border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:#e2e8f0;font-size:0.9rem;font-weight:500;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s}
+.pricing-card .btn-outline:hover{background:rgba(255,255,255,0.06)}
+.payment-section{text-align:center;padding:60px 24px;background:rgba(255,255,255,0.02);border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06)}
+.payment-section .qr-placeholder{width:200px;height:200px;margin:24px auto;border-radius:12px;background:rgba(255,255,255,0.05);border:2px dashed rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;flex-direction:column;color:#64748b;font-size:0.82rem;gap:8px}
+.payment-section .qr-placeholder .qr-icon{font-size:2.5rem}
+.payment-section .pay-methods{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+.payment-section .pay-method{padding:10px 20px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;font-size:0.85rem;color:#94a3b8}
+.submit-form{max-width:600px;margin:0 auto;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:32px}
+.submit-form label{display:block;font-size:0.85rem;font-weight:500;color:#cbd5e1;margin-bottom:4px;margin-top:16px}
+.submit-form label:first-child{margin-top:0}
+.submit-form input,.submit-form select,.submit-form textarea{width:100%;padding:12px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;color:#e2e8f0;font-size:0.9rem;outline:none;transition:border-color .2s;font-family:inherit}
+.submit-form input:focus,.submit-form select:focus,.submit-form textarea:focus{border-color:#3b82f6}
+.submit-form input::placeholder,.submit-form textarea::placeholder{color:#64748b}
+.submit-form select option{background:#1e293b;color:#e2e8f0}
+.submit-form .file-hint{font-size:0.75rem;color:#64748b;margin-top:4px}
+.submit-form .submit-btn{width:100%;margin-top:20px;padding:14px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);border:none;border-radius:10px;color:#fff;font-size:1rem;font-weight:600;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.submit-form .submit-btn:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(59,130,246,0.35)}
+.submit-form .submit-btn:disabled{opacity:0.5;cursor:not-allowed;transform:none}
+footer{text-align:center;padding:40px 24px;color:#64748b;font-size:0.8rem;border-top:1px solid rgba(255,255,255,0.04)}
+footer a{color:#60a5fa;text-decoration:none}
+footer a:hover{text-decoration:underline}
+#features,#showcase,#how-it-works,#pricing,#submit{scroll-margin-top:70px}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);padding:12px 24px;border-radius:10px;color:#fff;font-size:0.9rem;z-index:9999;opacity:0;transition:opacity .3s;pointer-events:none}
+.toast.show{opacity:1}
+.toast.success{background:#059669}
+.toast.error{background:#dc2626}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">🐛 <span>小书虫 AI 视频工坊</span></a>
+    <button class="mobile-menu-btn" onclick="toggleNav()">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#features" onclick="closeNav()">平台功能</a></li>
+      <li><a href="#showcase" onclick="closeNav()">视频示例</a></li>
+      <li><a href="#how-it-works" onclick="closeNav()">制作流程</a></li>
+      <li><a href="#pricing" onclick="closeNav()">订阅方案</a></li>
+      <li><a href="#submit" onclick="closeNav()" class="nav-cta">提交素材 ✦</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg">
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">✨ AI 驱动的儿童教育视频生成平台</div>
+    <h1>上传素材，AI 帮你<br>生成 <span class="gradient">专业教育视频</span></h1>
+    <p>英语跟读视频 · 绘本动画 · 雅思口语跟读 · 词汇闪卡视频 — 无需剪辑经验，AI 全自动制作</p>
+    <div class="hero-btns">
+      <a href="#submit" class="btn-primary">✦ 提交素材开始制作</a>
+      <a href="#showcase" class="btn-secondary">看视频示例 →</a>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="section-label">● 平台功能</div>
+  <h2 class="section-title">一站式教育视频制作平台</h2>
+  <p class="section-desc">从素材到成品视频，全流程 AI 自动处理。支持多种视频类型和自定义样式。</p>
+  <div class="features-grid">
+    <div class="feature-card" style="--acclr:#3b82f6">
+      <span class="icon">🎬</span>
+      <h3>英语跟读视频</h3>
+      <p>逐句 TTS 配音 + 滚动字幕，句子逐行高亮显示，适合孩子模仿跟读。支持自定義配音語速。</p>
+    </div>
+    <div class="feature-card" style="--acclr:#8b5cf6">
+      <span class="icon">📖</span>
+      <h3>AI 绘本动画</h3>
+      <p>上传绘本图片 + 文字，AI 自动生成带配音和字幕的绘本故事动画视频。支持中英文绘本。</p>
+    </div>
+    <div class="feature-card" style="--acclr:#f59e0b">
+      <span class="icon">🎯</span>
+      <h3>雅思口语跟读</h3>
+      <p>雅思 900 句口语跟读视频，专业封面模板 + 逐句跟读节奏控制，适合雅思口语备考。</p>
+    </div>
+    <div class="feature-card" style="--acclr:#10b981">
+      <span class="icon">🎨</span>
+      <h3>词汇闪卡视频</h3>
+      <p>单词 + 图片 + 例句自动组合，生成节奏化词汇学习视频。支持中英双语闪卡。</p>
+    </div>
+    <div class="feature-card" style="--acclr:#ef4444">
+      <span class="icon">🔄</span>
+      <h3>ASS 滚动字幕</h3>
+      <p>专业级 ASS 滚动字幕轨道模型，当前句高亮橙色 + 历史句白色，视觉清晰不重叠。</p>
+    </div>
+    <div class="feature-card" style="--acclr:#06b6d4">
+      <span class="icon">🖼️</span>
+      <h3>插画 + 字幕布局</h3>
+      <p>上插画 + 下绘本风格字幕区，圆角白框 + 渐变背景 + 装饰元素，适合幼儿观看。</p>
+    </div>
+    <div class="feature-card" style="--acclr:#f43f5e">
+      <span class="icon">📤</span>
+      <h3>飛書雲端交付</h3>
+      <p>成品视频直接上传飞书云盘，共享给指定成员，无需下载即可在线播放。</p>
+    </div>
+    <div class="feature-card" style="--acclr:#a855f7">
+      <span class="icon">⚡</span>
+      <h3>快速交付</h3>
+      <p>标准订单 24-48 小时内交付，加急订单最快 4 小时出片。支持反复修改调整。</p>
+    </div>
+  </div>
+</section>
+
+<section id="showcase">
+  <div class="section-label">● 视频示例</div>
+  <h2 class="section-title">看看我们的作品</h2>
+  <p class="section-desc">以下是 AI 自动生成的儿童教育视频示例，点击播放体验效果。</p>
+  <div class="video-grid">
+    <div class="video-card">
+      <video controls preload="metadata">
+        <source src="videos/lion_mouse_cute_v7_bigdeco.mp4" type="video/mp4">
+      </video>
+      <div class="info">
+        <h4>🦁 狮子和老鼠 — 绘本动画</h4>
+        <p>AI 绘本故事动画 · 中英双语 · 儿童版</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <video controls preload="metadata">
+        <source src="videos/hare_tortoise_cute.mp4" type="video/mp4">
+      </video>
+      <div class="info">
+        <h4>🐢 龟兔赛跑 — 绘本动画</h4>
+        <p>AI 绘本故事动画 · 中英双语 · 儿童版</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how-it-works">
+  <div class="section-label">● 制作流程</div>
+  <h2 class="section-title">简单三步，获得专属视频</h2>
+  <p class="section-desc">无需任何剪辑经验，只需提供素材，剩下的交给 AI。</p>
+  <div class="steps">
+    <div class="step">
+      <div class="num">1</div>
+      <h3>📝 提交素材</h3>
+      <p>填写视频类型、上传文本或图片素材，告诉我们你的需求</p>
+    </div>
+    <div class="step">
+      <div class="num">2</div>
+      <h3>🤖 AI 自动制作</h3>
+      <p>AI 自动配音、配字幕、生成画面、合成视频，全流程自动化</p>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <h3>📥 交付成品</h3>
+      <p>视频上传飞书云盘或发送下载链接，支持修改调整</p>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="section-label">● 订阅方案</div>
+  <h2 class="section-title">选择适合你的方案</h2>
+  <p class="section-desc">按需付费，无隐藏费用。所有方案均含修改调整服务。</p>
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <h3>🎯 单次制作</h3>
+      <div class="price">$50<span> /次</span></div>
+      <p class="desc">适合偶尔需要制作视频的家长</p>
+      <ul>
+        <li>1 个完整视频制作</li>
+        <li>含配音 + 字幕 + 画面</li>
+        <li>2 次免费修改</li>
+        <li>飞书云盘交付</li>
+        <li>标准 48 小时交付</li>
+      </ul>
+      <a href="#submit" class="btn-outline">立即下单</a>
+    </div>
+    <div class="pricing-card featured">
+      <div class="badge">✨ 最受欢迎</div>
+      <h3>📦 月付套餐</h3>
+      <div class="price">$200<span> /月</span></div>
+      <p class="desc">适合定期需要视频素材的老师和家长</p>
+      <ul>
+        <li>每月 5 个视频制作</li>
+        <li>含配音 + 字幕 + 画面</li>
+        <li>无限次修改</li>
+        <li>飞书云盘交付</li>
+        <li>优先制作（24 小时内）</li>
+        <li>专属客服支持</li>
+      </ul>
+      <a href="#submit" class="btn">选择月付方案</a>
+    </div>
+    <div class="pricing-card">
+      <h3>🏫 季度套餐</h3>
+      <div class="price">$500<span> /季</span></div>
+      <p class="desc">适合教育机构或长期使用</p>
+      <ul>
+        <li>每季 15 个视频制作</li>
+        <li>含配音 + 字幕 + 画面</li>
+        <li>无限次修改</li>
+        <li>飞书云盘交付</li>
+        <li>优先制作（24 小时内）</li>
+        <li>专属客服 + 批量对接</li>
+      </ul>
+      <a href="#submit" class="btn-outline">选择季度方案</a>
+    </div>
+  </div>
+</section>
+
+<div class="payment-section" id="payment">
+  <div class="section-label" style="color:#64748b;margin-bottom:8px">● 付款方式</div>
+  <h2 class="section-title" style="margin-bottom:8px">支持以下付款方式</h2>
+  <p style="color:#94a3b8;font-size:0.9rem;max-width:500px;margin:0 auto 16px;">
+    选择方案后，扫描下方二维码付款，截图发送确认即可开始制作。
+  </p>
+  <div class="qr-placeholder">
+    <span class="qr-icon">💳</span>
+    <span>请上传你的收款二维码图片<br>替换此占位区域</span>
+  </div>
+  <div class="pay-methods">
+    <span class="pay-method">🇭🇰 FPS 轉數快</span>
+    <span class="pay-method">💳 支付宝</span>
+    <span class="pay-method">💳 微信支付</span>
+  </div>
+</div>
+
+<section id="submit">
+  <div class="section-label">● 提交素材</div>
+  <h2 class="section-title">开始制作你的视频</h2>
+  <p class="section-desc">填写以下信息，我们会尽快联系你确认需求并开始制作。</p>
+  <form class="submit-form" id="orderForm" action="https://formspree.io/f/your-form-id" method="POST" enctype="multipart/form-data">
+    <label for="name">你的名字 *</label>
+    <input type="text" id="name" name="name" required placeholder="如：张妈妈">
+
+    <label for="contact">联系方式 *</label>
+    <input type="text" id="contact" name="contact" required placeholder="微信 / 电话 / Telegram">
+
+    <label for="video-type">视频类型 *</label>
+    <select id="video-type" name="video-type" required>
+      <option value="">请选择视频类型</option>
+      <option value="read-aloud">🎬 英语跟读视频</option>
+      <option value="storybook">📖 AI 绘本动画</option>
+      <option value="ielts">🎯 雅思口语跟读</option>
+      <option value="flashcard">🎨 词汇闪卡视频</option>
+      <option value="custom">其他（请在备注说明）</option>
+    </select>
+
+    <label for="plan">选择方案</label>
+    <select id="plan" name="plan">
+      <option value="single">🎯 单次制作 - $50</option>
+      <option value="monthly">📦 月付套餐 - $200/月</option>
+      <option value="quarterly">🏫 季度套餐 - $500/季</option>
+    </select>
+
+    <label for="description">素材描述 / 需求说明 *</label>
+    <textarea id="description" name="description" rows="5" required placeholder="请描述你的需求，例如：&#10;• 文本内容（可粘贴文字）&#10;• 想用什么语言配音&#10;• 是否有图片素材&#10;• 视频时长要求&#10;• 特殊要求（颜色、风格等）"></textarea>
+
+    <label for="files">上传素材文件</label>
+    <input type="file" id="files" name="files" multiple accept=".txt,.pdf,.doc,.docx,.jpg,.jpeg,.png,.gif,.mp3,.mp4,.zip">
+    <div class="file-hint">支持上传文本、图片、音频、PDF、ZIP 等文件（单个文件不超过 20MB）</div>
+
+    <button type="submit" class="submit-btn" id="submitBtn">✦ 提交订单</button>
+  </form>
+</section>
+
+<footer>
+  <p>🐛 小书虫 AI 视频工坊 · 為香港小學生打造優質教育視頻</p>
+  <p style="margin-top:4px">
+    <a href="mailto:geekspherehk@gmail.com">📧 geekspherehk@gmail.com</a>
+    &nbsp;·&nbsp;
+    <a href="https://geekspherehk.github.io/study-materials/">📚 学习资料站</a>
+  </p>
+  <p style="margin-top:12px;font-size:0.75rem">© 2025 小书虫 AI 视频工坊 · 保留所有权利</p>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+function toggleNav(){
+  document.getElementById('navLinks').classList.toggle('open');
+}
+function closeNav(){
+  document.getElementById('navLinks').classList.remove('open');
+}
+document.getElementById('orderForm').addEventListener('submit', function(e){
+  const btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.textContent = '⏳ 提交中...';
+  if(this.action.includes('your-form-id')){
+    e.preventDefault();
+    showToast('✅ 订单已收到！我们会尽快通过你留下的联系方式联系你。', 'success');
+    btn.disabled = false;
+    btn.textContent = '✦ 提交订单';
+    this.reset();
+  }
+});
+function showToast(msg, type){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast ' + type + ' show';
+  setTimeout(() => t.classList.remove('show'), 4000);
+}
+</script>
+</body>
+</html>
