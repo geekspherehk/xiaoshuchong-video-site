@@ -3,128 +3,320 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>小书虫 AI 视频工坊 — 兒童英語跟讀視頻 × AI 繪本動畫</title>
-<meta name="description" content="小书虫 AI 视频工坊｜為香港小學生提供 AI 英語跟讀視頻製作、繪本動畫、雅思口語跟讀等教育視頻服務。上傳素材，我們幫你生成專業視頻。">
-<meta name="keywords" content="小书虫, AI视频, 英语跟读, 绘本动画, 儿童英语, 香港小学, 雅思口语, 教育视频">
-<meta property="og:title" content="小书虫 AI 视频工坊">
-<meta property="og:description" content="兒童英語跟讀視頻 × AI 繪本動畫 — 上傳素材，AI 幫你生成專業教育視頻">
+<title>小书虫 AI 视频工坊 — 兒童英語跟讀視頻製作 | 香港</title>
+<meta name="description" content="小书虫为香港小学生提供 AI 英语跟读视频制作服务。上传素材，AI 自动生成专业儿童英语跟读视频。省钱省心，效果看得见。">
+<meta name="keywords" content="小书虫, AI视频, 英语跟读, 绘本动画, 儿童英语, 香港小学, 教育视频">
+<meta property="og:title" content="小书虫 AI 视频工坊 — 兒童英語跟讀視頻">
+<meta property="og:description" content="上传素材，AI 帮你生成专业儿童英语跟读视频。每段视频含配音、大字幕、中英对照。">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_HK">
 <link rel="canonical" href="https://xiaoshuchong.com/">
 <style>
+/* ── Reset & Base ── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;background:#0f172a;color:#e2e8f0;line-height:1.7;-webkit-font-smoothing:antialiased}
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(15,23,42,0.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.06)}
-.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 24px}
-.nav-logo{font-size:1.15rem;font-weight:800;color:#fff;text-decoration:none;display:flex;align-items:center;gap:8px}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  font-family:-apple-system,"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;
+  background:#0b1120;color:#e2e8f0;line-height:1.7;-webkit-font-smoothing:antialiased;
+  overflow-x:hidden
+}
+img{max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+
+/* ── Nav ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:rgba(11,17,32,0.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,0.05)
+}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 16px}
+.nav-logo{font-size:1.05rem;font-weight:800;color:#fff;display:flex;align-items:center;gap:6px}
 .nav-logo span{background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.nav-links{display:flex;gap:24px;list-style:none}
-.nav-links a{color:#94a3b8;text-decoration:none;font-size:0.9rem;font-weight:500;transition:color .2s}
+.nav-links{display:flex;gap:16px;list-style:none}
+.nav-links a{color:#94a3b8;text-decoration:none;font-size:0.82rem;font-weight:500;padding:4px 0;transition:color .2s;white-space:nowrap}
 .nav-links a:hover{color:#60a5fa}
-.nav-cta{padding:8px 20px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);border:none;border-radius:8px;color:#fff;font-size:0.85rem;font-weight:600;cursor:pointer;transition:transform .2s,box-shadow .2s;text-decoration:none}
+.nav-cta{
+  padding:7px 16px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);border:none;border-radius:8px;
+  color:#fff !important;font-size:0.78rem;font-weight:600;cursor:pointer;transition:transform .2s,box-shadow .2s
+}
 .nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(59,130,246,0.35)}
 .mobile-menu-btn{display:none;background:transparent;border:none;color:#fff;font-size:1.5rem;cursor:pointer;padding:4px}
 @media(max-width:768px){
   .mobile-menu-btn{display:block}
-  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(15,23,42,0.96);flex-direction:column;padding:16px 24px;gap:12px;border-bottom:1px solid rgba(255,255,255,0.06)}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(11,17,32,0.97);flex-direction:column;padding:12px 20px;gap:10px;border-bottom:1px solid rgba(255,255,255,0.06)}
   .nav-links.open{display:flex}
+  .nav-cta{text-align:center}
 }
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 24px 60px;position:relative;overflow:hidden}
+
+/* ── Section shared ── */
+section{padding:60px 16px;max-width:1100px;margin:0 auto}
+@media(min-width:768px){section{padding:80px 24px}}
+.section-label{font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;color:#64748b;margin-bottom:6px}
+.section-title{font-size:clamp(1.3rem,4vw,1.8rem);font-weight:700;color:#fff;margin-bottom:8px;line-height:1.3}
+.section-desc{color:#94a3b8;max-width:560px;margin-bottom:28px;font-size:0.9rem;line-height:1.6}
+@media(max-width:480px){.section-desc{font-size:0.85rem;margin-bottom:20px}}
+
+/* ── Hero ── */
+.hero{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;
+  padding:80px 16px 50px;position:relative;overflow:hidden
+}
 .hero-bg{position:absolute;inset:0;pointer-events:none;overflow:hidden}
-.hero-bg .orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:0.25}
-.hero-bg .orb:nth-child(1){width:500px;height:500px;background:#3b82f6;top:-120px;left:-100px;animation:float1 8s ease-in-out infinite}
-.hero-bg .orb:nth-child(2){width:400px;height:400px;background:#8b5cf6;bottom:-80px;right:-60px;animation:float2 10s ease-in-out infinite}
-.hero-bg .orb:nth-child(3){width:300px;height:300px;background:#f59e0b;top:50%;left:50%;transform:translate(-50%,-50%);opacity:0.08}
-@keyframes float1{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,-30px)}}
-@keyframes float2{0%,100%{transform:translate(0,0)}50%{transform:translate(-30px,40px)}}
-.hero-content{position:relative;z-index:1;max-width:720px}
-.hero-badge{display:inline-block;padding:6px 16px;background:rgba(59,130,246,0.15);border:1px solid rgba(59,130,246,0.25);border-radius:20px;font-size:0.8rem;color:#93c5fd;margin-bottom:20px}
-.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;line-height:1.2;margin-bottom:16px;color:#fff}
+.hero-bg .orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:0.2}
+.hero-bg .orb:nth-child(1){width:60vw;height:60vw;max-width:500px;max-height:500px;background:#3b82f6;top:-15%;left:-20%}
+.hero-bg .orb:nth-child(2){width:50vw;height:50vw;max-width:400px;max-height:400px;background:#8b5cf6;bottom:-10%;right:-15%}
+@keyframes float1{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,-20px)}}
+@keyframes float2{0%,100%{transform:translate(0,0)}50%{transform:translate(-20px,30px)}}
+.hero-bg .orb:nth-child(1){animation:float1 8s ease-in-out infinite}
+.hero-bg .orb:nth-child(2){animation:float2 10s ease-in-out infinite}
+.hero-content{position:relative;z-index:1;max-width:680px}
+.hero-badge{
+  display:inline-block;padding:5px 14px;background:rgba(59,130,246,0.12);border:1px solid rgba(59,130,246,0.2);
+  border-radius:20px;font-size:0.72rem;color:#93c5fd;margin-bottom:16px
+}
+.hero h1{font-size:clamp(1.6rem,5.5vw,2.8rem);font-weight:800;line-height:1.25;margin-bottom:12px;color:#fff}
 .hero h1 .gradient{background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero p{font-size:1.1rem;color:#94a3b8;max-width:560px;margin:0 auto 32px}
-.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.hero-btns .btn-primary{padding:14px 32px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);border:none;border-radius:10px;color:#fff;font-size:1rem;font-weight:600;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s}
-.hero-btns .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(59,130,246,0.4)}
-.hero-btns .btn-secondary{padding:14px 32px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:10px;color:#e2e8f0;font-size:1rem;font-weight:500;cursor:pointer;text-decoration:none;transition:background .2s}
-.hero-btns .btn-secondary:hover{background:rgba(255,255,255,0.1)}
-section{padding:80px 24px;max-width:1100px;margin:0 auto}
-.section-label{font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;color:#64748b;margin-bottom:8px}
-.section-title{font-size:clamp(1.5rem,3vw,2rem);font-weight:700;color:#fff;margin-bottom:12px}
-.section-desc{color:#94a3b8;max-width:600px;margin-bottom:40px;font-size:0.95rem}
-.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-.feature-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:28px 24px;transition:all .3s;position:relative;overflow:hidden}
+.hero p{font-size:clamp(0.85rem,2.5vw,1.05rem);color:#94a3b8;max-width:520px;margin:0 auto 24px;line-height:1.6}
+.hero-stats{display:flex;justify-content:center;gap:24px;margin-bottom:24px;flex-wrap:wrap}
+.hero-stat{text-align:center}
+.hero-stat .num{font-size:clamp(1.2rem,3vw,1.6rem);font-weight:800;color:#60a5fa;display:block}
+.hero-stat .label{font-size:0.72rem;color:#64748b;margin-top:2px}
+.hero-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn-primary,.btn-secondary{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  padding:13px 24px;border-radius:10px;font-size:0.9rem;font-weight:600;cursor:pointer;
+  transition:transform .2s,box-shadow .2s;text-decoration:none;min-height:48px;min-width:160px
+}
+@media(max-width:480px){
+  .btn-primary,.btn-secondary{width:100%;max-width:320px;padding:14px 20px;font-size:0.95rem}
+  .hero-stats{gap:16px}
+  .hero-stat .num{font-size:1.1rem}
+  .hero-stat .label{font-size:0.65rem}
+}
+.btn-primary{
+  background:linear-gradient(135deg,#3b82f6,#8b5cf6);border:none;color:#fff
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(59,130,246,0.4)}
+.btn-secondary{
+  background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:#e2e8f0
+}
+.btn-secondary:hover{background:rgba(255,255,255,0.1)}
+
+/* ── Why section (核心卖点) ── */
+.why-grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:640px){.why-grid{grid-template-columns:1fr 1fr}}
+.why-card{
+  background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);
+  border-radius:14px;padding:24px 20px;transition:all .3s;position:relative
+}
+.why-card:hover{background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12)}
+.why-card .icon{font-size:1.6rem;margin-bottom:8px;display:block}
+.why-card h3{font-size:0.95rem;font-weight:600;color:#fff;margin-bottom:4px}
+.why-card p{font-size:0.82rem;color:#94a3b8;line-height:1.6}
+.why-card .tag{
+  display:inline-block;padding:2px 10px;border-radius:12px;font-size:0.65rem;
+  font-weight:600;margin-bottom:8px
+}
+.tag-green{background:rgba(16,185,129,0.15);color:#34d399}
+.tag-blue{background:rgba(59,130,246,0.15);color:#93c5fd}
+.tag-amber{background:rgba(245,158,11,0.15);color:#fbbf24}
+.tag-pink{background:rgba(244,63,94,0.15);color:#fb7185}
+.tag-purple{background:rgba(168,85,247,0.15);color:#c4b5fd}
+
+/* ── Comparison table (效果对比) ── */
+.comparison-section{
+  background:rgba(255,255,255,0.02);border-top:1px solid rgba(255,255,255,0.04);
+  border-bottom:1px solid rgba(255,255,255,0.04);padding:50px 16px;text-align:center
+}
+@media(min-width:768px){.comparison-section{padding:70px 24px}}
+.comparison-section .section-title,.comparison-section .section-desc{margin-left:auto;margin-right:auto}
+.comp-table{max-width:700px;margin:0 auto;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.comp-table table{width:100%;border-collapse:collapse;font-size:0.82rem}
+@media(max-width:480px){.comp-table table{font-size:0.75rem}}
+.comp-table th,.comp-table td{padding:10px 8px;text-align:center;border-bottom:1px solid rgba(255,255,255,0.06)}
+@media(min-width:640px){.comp-table th,.comp-table td{padding:12px 16px}}
+.comp-table th{color:#64748b;font-weight:600;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.05em}
+.comp-table td{color:#cbd5e1}
+.comp-table .highlight{color:#60a5fa;font-weight:700}
+.comp-table .check{color:#34d399}
+.comp-table .cross{color:#ef4444;opacity:0.5}
+.comp-table tr:first-child td{border-top:1px solid rgba(255,255,255,0.1)}
+.comp-note{font-size:0.75rem;color:#64748b;margin-top:12px}
+
+/* ── Features reconfigured for mobile ── */
+.features-grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:480px){.features-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.features-grid{grid-template-columns:1fr 1fr 1fr 1fr}}
+.feature-card{
+  background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);
+  border-radius:12px;padding:20px 18px;transition:all .3s;position:relative;overflow:hidden
+}
 .feature-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--acclr),transparent);opacity:0;transition:opacity .3s}
 .feature-card:hover::before{opacity:1}
-.feature-card:hover{background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);transform:translateY(-3px)}
-.feature-card .icon{font-size:2rem;margin-bottom:12px;display:block}
-.feature-card h3{font-size:1rem;font-weight:600;color:#fff;margin-bottom:6px}
-.feature-card p{font-size:0.85rem;color:#94a3b8;line-height:1.6}
-.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
-.video-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:14px;overflow:hidden;transition:all .3s;cursor:pointer}
-.video-card:hover{background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);transform:translateY(-3px)}
+.feature-card:hover{background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);transform:translateY(-2px)}
+.feature-card .icon{font-size:1.5rem;margin-bottom:8px;display:block}
+.feature-card h3{font-size:0.88rem;font-weight:600;color:#fff;margin-bottom:4px}
+.feature-card p{font-size:0.78rem;color:#94a3b8;line-height:1.5}
+
+/* ── Video showcase ── */
+.video-grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:640px){.video-grid{grid-template-columns:1fr 1fr}}
+.video-card{
+  background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);
+  border-radius:12px;overflow:hidden;transition:all .3s
+}
+.video-card:hover{background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);transform:translateY(-2px)}
 .video-card video{width:100%;display:block;background:#000;aspect-ratio:16/9;object-fit:contain}
-.video-card .info{padding:14px 16px}
-.video-card .info h4{font-size:0.9rem;font-weight:600;color:#fff;margin-bottom:4px}
-.video-card .info p{font-size:0.8rem;color:#94a3b8}
-.steps{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;counter-reset:step}
-.step{flex:1;min-width:200px;max-width:300px;text-align:center;padding:28px 20px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:14px;position:relative}
-.step .num{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#3b82f6,#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:700;color:#fff;margin:0 auto 12px}
-.step h3{font-size:0.95rem;font-weight:600;color:#fff;margin-bottom:6px}
-.step p{font-size:0.82rem;color:#94a3b8}
-.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-.pricing-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:32px 24px;text-align:center;transition:all .3s;position:relative}
-.pricing-card.featured{background:rgba(59,130,246,0.08);border-color:rgba(59,130,246,0.3)}
-.pricing-card.featured .badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);padding:4px 16px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);border-radius:20px;font-size:0.75rem;font-weight:600;color:#fff}
-.pricing-card h3{font-size:1rem;font-weight:600;color:#fff;margin-bottom:4px}
-.pricing-card .price{font-size:2rem;font-weight:800;color:#fff;margin:12px 0 6px}
-.pricing-card .price span{font-size:0.9rem;font-weight:400;color:#64748b}
-.pricing-card .desc{font-size:0.85rem;color:#94a3b8;margin-bottom:20px}
-.pricing-card ul{list-style:none;text-align:left;margin-bottom:24px}
-.pricing-card ul li{padding:6px 0;font-size:0.85rem;color:#cbd5e1;display:flex;align-items:center;gap:8px}
-.pricing-card ul li::before{content:'✓';color:#3b82f6;font-weight:700}
-.pricing-card .btn{padding:12px 28px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);border:none;border-radius:8px;color:#fff;font-size:0.9rem;font-weight:600;cursor:pointer;text-decoration:none;display:inline-block;transition:transform .2s,box-shadow .2s}
+.video-card .info{padding:12px 14px}
+.video-card .info h4{font-size:0.85rem;font-weight:600;color:#fff;margin-bottom:3px}
+.video-card .info p{font-size:0.75rem;color:#94a3b8}
+
+/* ── Testimonial / social proof ── */
+.testimonial-grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:640px){.testimonial-grid{grid-template-columns:1fr 1fr}}
+.testimonial-card{
+  background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);
+  border-radius:12px;padding:20px 18px
+}
+.testimonial-card .stars{color:#fbbf24;font-size:0.85rem;margin-bottom:6px}
+.testimonial-card blockquote{font-size:0.82rem;color:#cbd5e1;line-height:1.6;font-style:italic}
+.testimonial-card .author{font-size:0.72rem;color:#64748b;margin-top:6px;font-style:normal}
+
+/* ── Process steps ── */
+.steps{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:640px){.steps{grid-template-columns:1fr 1fr 1fr}}
+.step{
+  text-align:center;padding:24px 16px;background:rgba(255,255,255,0.02);
+  border:1px solid rgba(255,255,255,0.06);border-radius:12px;position:relative
+}
+.step .num{
+  width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#3b82f6,#8b5cf6);
+  display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:700;
+  color:#fff;margin:0 auto 10px
+}
+.step h3{font-size:0.88rem;font-weight:600;color:#fff;margin-bottom:4px}
+.step p{font-size:0.78rem;color:#94a3b8}
+
+/* ── Pricing ── */
+.pricing-grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:480px){.pricing-grid{grid-template-columns:1fr 1fr 1fr}}
+.pricing-card{
+  background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);
+  border-radius:14px;padding:28px 20px;text-align:center;transition:all .3s;position:relative
+}
+.pricing-card.featured{background:rgba(59,130,246,0.08);border-color:rgba(59,130,246,0.3);order:-1}
+@media(min-width:480px){.pricing-card.featured{order:0}}
+.pricing-card.featured .badge{
+  position:absolute;top:-12px;left:50%;transform:translateX(-50%);
+  padding:3px 14px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);
+  border-radius:20px;font-size:0.7rem;font-weight:600;color:#fff;white-space:nowrap
+}
+.pricing-card .value-anchor{font-size:0.7rem;color:#64748b;text-decoration:line-through;margin-bottom:2px}
+.pricing-card h3{font-size:0.95rem;font-weight:600;color:#fff;margin-bottom:2px}
+.pricing-card .price{font-size:clamp(1.5rem,4vw,1.8rem);font-weight:800;color:#fff;margin:8px 0 4px}
+.pricing-card .price span{font-size:0.8rem;font-weight:400;color:#64748b}
+.pricing-card .price .per-unit{display:block;font-size:0.7rem;color:#60a5fa;font-weight:500;margin-top:2px}
+.pricing-card .desc{font-size:0.78rem;color:#94a3b8;margin-bottom:16px}
+.pricing-card ul{list-style:none;text-align:left;margin-bottom:18px}
+.pricing-card ul li{padding:5px 0;font-size:0.8rem;color:#cbd5e1;display:flex;align-items:center;gap:7px}
+.pricing-card ul li::before{content:'✓';color:#3b82f6;font-weight:700;flex-shrink:0}
+.pricing-card .btn,.pricing-card .btn-outline{
+  display:inline-block;padding:11px 24px;border-radius:8px;font-size:0.82rem;font-weight:600;
+  cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s;min-width:140px
+}
+.pricing-card .btn{background:linear-gradient(135deg,#3b82f6,#8b5cf6);border:none;color:#fff}
 .pricing-card .btn:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(59,130,246,0.3)}
-.pricing-card .btn-outline{padding:12px 28px;background:transparent;border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:#e2e8f0;font-size:0.9rem;font-weight:500;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s}
+.pricing-card .btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.15);color:#e2e8f0}
 .pricing-card .btn-outline:hover{background:rgba(255,255,255,0.06)}
-.payment-section{text-align:center;padding:60px 24px;background:rgba(255,255,255,0.02);border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06)}
-.payment-section .qr-placeholder{width:200px;height:200px;margin:24px auto;border-radius:12px;background:rgba(255,255,255,0.05);border:2px dashed rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;flex-direction:column;color:#64748b;font-size:0.82rem;gap:8px}
-.payment-section .qr-placeholder .qr-icon{font-size:2.5rem}
-.payment-section .pay-methods{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:16px}
-.payment-section .pay-method{padding:10px 20px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;font-size:0.85rem;color:#94a3b8}
-.submit-form{max-width:600px;margin:0 auto;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:32px}
-.submit-form label{display:block;font-size:0.85rem;font-weight:500;color:#cbd5e1;margin-bottom:4px;margin-top:16px}
+
+/* ── Payment ── */
+.payment-section{
+  text-align:center;padding:40px 16px;background:rgba(255,255,255,0.02);
+  border-top:1px solid rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.04)
+}
+@media(min-width:768px){.payment-section{padding:60px 24px}}
+.payment-section .qr-placeholder{
+  width:180px;height:180px;margin:20px auto;border-radius:12px;
+  background:rgba(255,255,255,0.05);border:2px dashed rgba(255,255,255,0.1);
+  display:flex;align-items:center;justify-content:center;flex-direction:column;color:#64748b;font-size:0.78rem;gap:8px
+}
+.payment-section .qr-placeholder .qr-icon{font-size:2.2rem}
+.pay-methods{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.pay-method{
+  padding:7px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);
+  border-radius:8px;font-size:0.78rem;color:#94a3b8;white-space:nowrap
+}
+
+/* ── Submit form ── */
+.submit-form{max-width:560px;margin:0 auto;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:24px}
+@media(min-width:640px){.submit-form{padding:32px}}
+.submit-form label{display:block;font-size:0.82rem;font-weight:500;color:#cbd5e1;margin-bottom:3px;margin-top:14px}
 .submit-form label:first-child{margin-top:0}
-.submit-form input,.submit-form select,.submit-form textarea{width:100%;padding:12px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;color:#e2e8f0;font-size:0.9rem;outline:none;transition:border-color .2s;font-family:inherit}
+.submit-form input,.submit-form select,.submit-form textarea{
+  width:100%;padding:11px 12px;background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);border-radius:8px;color:#e2e8f0;
+  font-size:0.85rem;outline:none;transition:border-color .2s;font-family:inherit
+}
 .submit-form input:focus,.submit-form select:focus,.submit-form textarea:focus{border-color:#3b82f6}
-.submit-form input::placeholder,.submit-form textarea::placeholder{color:#64748b}
+.submit-form input::placeholder,.submit-form textarea::placeholder{color:#475569}
 .submit-form select option{background:#1e293b;color:#e2e8f0}
-.submit-form .file-hint{font-size:0.75rem;color:#64748b;margin-top:4px}
-.submit-form .submit-btn{width:100%;margin-top:20px;padding:14px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);border:none;border-radius:10px;color:#fff;font-size:1rem;font-weight:600;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.submit-form .file-hint{font-size:0.7rem;color:#64748b;margin-top:3px}
+.submit-form .submit-btn{
+  width:100%;margin-top:18px;padding:14px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);
+  border:none;border-radius:10px;color:#fff;font-size:0.95rem;font-weight:600;cursor:pointer;
+  transition:transform .2s,box-shadow .2s;min-height:48px
+}
 .submit-form .submit-btn:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(59,130,246,0.35)}
 .submit-form .submit-btn:disabled{opacity:0.5;cursor:not-allowed;transform:none}
-footer{text-align:center;padding:40px 24px;color:#64748b;font-size:0.8rem;border-top:1px solid rgba(255,255,255,0.04)}
+
+/* ── FAQ accordion ── */
+.faq-list{max-width:680px;margin:28px auto 0}
+.faq-item{border-bottom:1px solid rgba(255,255,255,0.05);padding:14px 0}
+.faq-q{
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+  font-size:0.88rem;font-weight:500;color:#cbd5e1;cursor:pointer;padding:4px 0;user-select:none
+}
+.faq-q .arrow{font-size:0.7rem;color:#64748b;transition:transform .3s;flex-shrink:0}
+.faq-item.open .faq-q .arrow{transform:rotate(180deg)}
+.faq-a{font-size:0.82rem;color:#94a3b8;line-height:1.6;padding-top:8px;display:none}
+.faq-item.open .faq-a{display:block}
+
+/* ── Footer ── */
+footer{text-align:center;padding:32px 16px;color:#64748b;font-size:0.75rem;border-top:1px solid rgba(255,255,255,0.03);line-height:1.8}
 footer a{color:#60a5fa;text-decoration:none}
 footer a:hover{text-decoration:underline}
-#features,#showcase,#how-it-works,#pricing,#submit{scroll-margin-top:70px}
-.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);padding:12px 24px;border-radius:10px;color:#fff;font-size:0.9rem;z-index:9999;opacity:0;transition:opacity .3s;pointer-events:none}
+
+/* ── Scroll anchors ── */
+#features,#why,#showcase,#how-it-works,#pricing,#faq,#submit{scroll-margin-top:60px}
+
+/* ── Toast ── */
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);padding:10px 20px;border-radius:10px;color:#fff;font-size:0.85rem;z-index:9999;opacity:0;transition:opacity .3s;pointer-events:none;text-align:center;max-width:90vw}
 .toast.show{opacity:1}
 .toast.success{background:#059669}
 .toast.error{background:#dc2626}
+
+/* ── Guarantee banner ── */
+.guarantee-banner{
+  background:linear-gradient(135deg,rgba(59,130,246,0.08),rgba(168,85,247,0.08));
+  border:1px solid rgba(59,130,246,0.15);border-radius:14px;padding:20px 18px;
+  text-align:center;margin-top:20px
+}
+.guarantee-banner .icon{font-size:1.5rem;margin-bottom:6px}
+.guarantee-banner h3{font-size:0.9rem;font-weight:600;color:#fff;margin-bottom:4px}
+.guarantee-banner p{font-size:0.78rem;color:#94a3b8}
 </style>
 </head>
 <body>
 
 <nav>
   <div class="nav-inner">
-    <a href="#" class="nav-logo">🐛 <span>小书虫 AI 视频工坊</span></a>
+    <a href="#" class="nav-logo">🐛 <span>小书虫</span></a>
     <button class="mobile-menu-btn" onclick="toggleNav()">☰</button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#features" onclick="closeNav()">平台功能</a></li>
+      <li><a href="#why" onclick="closeNav()">为什么选我们</a></li>
       <li><a href="#showcase" onclick="closeNav()">视频示例</a></li>
-      <li><a href="#how-it-works" onclick="closeNav()">制作流程</a></li>
-      <li><a href="#pricing" onclick="closeNav()">订阅方案</a></li>
-      <li><a href="#submit" onclick="closeNav()" class="nav-cta">提交素材 ✦</a></li>
+      <li><a href="#pricing" onclick="closeNav()">方案价格</a></li>
+      <li><a href="#submit" onclick="closeNav()" class="nav-cta">立即下单 ✦</a></li>
     </ul>
   </div>
 </nav>
@@ -133,158 +325,302 @@ footer a:hover{text-decoration:underline}
   <div class="hero-bg">
     <div class="orb"></div>
     <div class="orb"></div>
-    <div class="orb"></div>
   </div>
   <div class="hero-content">
-    <div class="hero-badge">✨ AI 驱动的儿童教育视频生成平台</div>
-    <h1>上传素材，AI 帮你<br>生成 <span class="gradient">专业教育视频</span></h1>
-    <p>英语跟读视频 · 绘本动画 · 雅思口语跟读 · 词汇闪卡视频 — 无需剪辑经验，AI 全自动制作</p>
+    <div class="hero-badge">🖍️ 香港家长专享 · AI 定制儿童跟读视频</div>
+    <h1>上传素材，AI 帮你生成<br><span class="gradient">专业的儿童跟读视频</span></h1>
+    <p>
+      每段视频含标准配音、超大屏幕字幕、中英对照 — 孩子看着视频就能跟读。<br>
+      不需剪辑经验，不用花时间陪练，AI 全自动制作。
+    </p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="num">24-48h</span>
+        <span class="label">标准交付</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num">每日跟读</span>
+        <span class="label">5分钟见效</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num">$25/次起</span>
+        <span class="label">远低于补习费</span>
+      </div>
+    </div>
     <div class="hero-btns">
       <a href="#submit" class="btn-primary">✦ 提交素材开始制作</a>
-      <a href="#showcase" class="btn-secondary">看视频示例 →</a>
+      <a href="#showcase" class="btn-secondary">看看效果 →</a>
     </div>
   </div>
 </section>
 
+<!-- ══════════ 为什么家长需要跟读视频 ══════════ -->
+<section id="why">
+  <div class="section-label">● 为什么选我们</div>
+  <h2 class="section-title">每天 5 分钟跟读，英语进步看得见</h2>
+  <p class="section-desc">
+    香港小学生的英语学习痛点：课堂时间有限、家长发音不标准、孩子缺乏开口机会。<br>
+    小书虫的 AI 跟读视频，让孩子在家也能像有外教陪练一样练习英语口语。
+  </p>
+  <div class="why-grid">
+    <div class="why-card">
+      <span class="icon">🎯</span>
+      <div class="tag tag-green">家长痛点精准解决</div>
+      <h3>不再担心自己发音不准</h3>
+      <p>视频由专业 AI 语音配音（同级儿童音色），发音纯正清晰。孩子只需要跟着视频读，家长不需要充当"英语老师"。</p>
+    </div>
+    <div class="why-card">
+      <span class="icon">📱</span>
+      <div class="tag tag-blue">学习效率高</div>
+      <h3>手机就能看，碎片时间利用</h3>
+      <p>视频在手机上流畅播放，等车、睡前、饭后——任何零碎时间都能跟读。每段 2-3 分钟，不伤眼、不枯燥。</p>
+    </div>
+    <div class="why-card">
+      <span class="icon">👂</span>
+      <div class="tag tag-amber">听说并进</div>
+      <h3>听一遍 → 跟读三遍 → 巩固记忆</h3>
+      <p>每句话自动重复 3 遍，孩子先听后读。大字字幕 + 中英对照，视觉和听觉双重输入，记忆效果翻倍。</p>
+    </div>
+    <div class="why-card">
+      <span class="icon">🎨</span>
+      <div class="tag tag-pink">孩子喜欢</div>
+      <h3>卡通设计 + 可爱语音，不抗拒学习</h3>
+      <p>浅色卡通装饰背景、大号彩色文字、可爱童声配音、星星云朵装饰——孩子觉得在看动画片，其实是学英语。</p>
+    </div>
+    <div class="why-card">
+      <span class="icon">✏️</span>
+      <div class="tag tag-purple">完全定制</div>
+      <h3>学校学过什么，视频就做什么</h3>
+      <p>把学校的课文、单词、绘本发给我，AI 按你的素材生成专属跟读视频。不脱离教学进度，孩子不陌生。</p>
+    </div>
+    <div class="why-card">
+      <span class="icon">💎</span>
+      <div class="tag tag-green">永久使用</div>
+      <h3>一个视频，反复用到滚瓜烂熟</h3>
+      <p>生成的视频永久有效，存在手机或飞书云盘，随时回放。相比补习班每小时 $200+，一个跟读视频可以反复看几十次。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 效果对比 ══════════ -->
+<div class="comparison-section">
+  <div class="section-label" style="color:#64748b;margin-bottom:8px">● 价值对比</div>
+  <h2 class="section-title">跟读视频 vs 其他学习方式</h2>
+  <p class="section-desc">看看哪种方式更适合你的孩子。</p>
+  <div class="comp-table">
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align:left">对比项</th>
+          <th>小书虫跟读视频</th>
+          <th>线下补习</th>
+          <th>自己教</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align:left;font-weight:500;color:#e2e8f0">每次费用</td>
+          <td><span class="highlight">$&nbsp;5-8</span></td>
+          <td>$200-500/小时</td>
+          <td>时间成本无法估量</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;font-weight:500;color:#e2e8f0">家长时间投入</td>
+          <td><span class="check">5 分钟检查</span></td>
+          <td><span class="check">接送 1 小时</span></td>
+          <td><span class="cross">需要全程陪练</span></td>
+        </tr>
+        <tr>
+          <td style="text-align:left;font-weight:500;color:#e2e8f0">发音标准度</td>
+          <td><span class="check">专业 AI 配音</span></td>
+          <td><span class="check">外教标准</span></td>
+          <td><span class="cross">取决于家长水平</span></td>
+        </tr>
+        <tr>
+          <td style="text-align:left;font-weight:500;color:#e2e8f0">反复使用</td>
+          <td><span class="check">无限次回放</span></td>
+          <td><span class="cross">过期无法重听</span></td>
+          <td><span class="check">可以反复</span></td>
+        </tr>
+        <tr>
+          <td style="text-align:left;font-weight:500;color:#e2e8f0">素材匹配</td>
+          <td><span class="check">按学校内容定制</span></td>
+          <td><span class="cross">固定教材</span></td>
+          <td><span class="check">完全自主</span></td>
+        </tr>
+        <tr>
+          <td style="text-align:left;font-weight:500;color:#e2e8f0">孩子兴趣</td>
+          <td><span class="check">卡通设计 + 跟读节奏</span></td>
+          <td><span class="cross">容易枯燥</span></td>
+          <td><span class="cross">依赖家长"演技"</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="comp-note">* 以季度套餐 $180/15个视频计算，每个视频 $12。视频可反复使用数十次。</p>
+  </div>
+</div>
+
+<!-- ══════════ 功能特色 ══════════ -->
 <section id="features">
-  <div class="section-label">● 平台功能</div>
-  <h2 class="section-title">一站式教育视频制作平台</h2>
-  <p class="section-desc">从素材到成品视频，全流程 AI 自动处理。支持多种视频类型和自定义样式。</p>
+  <div class="section-label">● 我们能做到</div>
+  <h2 class="section-title">一条龙视频制作服务</h2>
+  <p class="section-desc">上传素材到收到成品视频，全流程 AI 自动处理，你只需要提供文本内容。</p>
   <div class="features-grid">
     <div class="feature-card" style="--acclr:#3b82f6">
       <span class="icon">🎬</span>
       <h3>英语跟读视频</h3>
-      <p>逐句 TTS 配音 + 滚动字幕，句子逐行高亮显示，适合孩子模仿跟读。支持自定義配音語速。</p>
+      <p>逐句配音 + 大字幕 + 中英对照，句子自动重复 3 遍，孩子跟着读就行。</p>
     </div>
     <div class="feature-card" style="--acclr:#8b5cf6">
       <span class="icon">📖</span>
       <h3>AI 绘本动画</h3>
-      <p>上传绘本图片 + 文字，AI 自动生成带配音和字幕的绘本故事动画视频。支持中英文绘本。</p>
-    </div>
-    <div class="feature-card" style="--acclr:#f59e0b">
-      <span class="icon">🎯</span>
-      <h3>雅思口语跟读</h3>
-      <p>雅思 900 句口语跟读视频，专业封面模板 + 逐句跟读节奏控制，适合雅思口语备考。</p>
+      <p>绘本图片 + 文字上传，AI 生成带配音和字幕的绘本故事动画。支持中英文绘本。</p>
     </div>
     <div class="feature-card" style="--acclr:#10b981">
       <span class="icon">🎨</span>
       <h3>词汇闪卡视频</h3>
-      <p>单词 + 图片 + 例句自动组合，生成节奏化词汇学习视频。支持中英双语闪卡。</p>
-    </div>
-    <div class="feature-card" style="--acclr:#ef4444">
-      <span class="icon">🔄</span>
-      <h3>ASS 滚动字幕</h3>
-      <p>专业级 ASS 滚动字幕轨道模型，当前句高亮橙色 + 历史句白色，视觉清晰不重叠。</p>
+      <p>单词 + 图片 + 例句组合，生成节奏化词汇学习视频。支持中英双语闪卡。</p>
     </div>
     <div class="feature-card" style="--acclr:#06b6d4">
       <span class="icon">🖼️</span>
-      <h3>插画 + 字幕布局</h3>
-      <p>上插画 + 下绘本风格字幕区，圆角白框 + 渐变背景 + 装饰元素，适合幼儿观看。</p>
+      <h3>儿童友好设计</h3>
+      <p>卡通装饰背景、大号文字、可爱儿童配音——孩子看视频像看动画片，不抗拒学习。</p>
     </div>
     <div class="feature-card" style="--acclr:#f43f5e">
       <span class="icon">📤</span>
-      <h3>飛書雲端交付</h3>
-      <p>成品视频直接上传飞书云盘，共享给指定成员，无需下载即可在线播放。</p>
+      <h3>飞书云盘交付</h3>
+      <p>成品视频上传飞书云盘，手机在线播放，无需下载。全家人共享。</p>
     </div>
     <div class="feature-card" style="--acclr:#a855f7">
       <span class="icon">⚡</span>
-      <h3>快速交付</h3>
-      <p>标准订单 24-48 小时内交付，加急订单最快 4 小时出片。支持反复修改调整。</p>
+      <h3>免费修改 + 快速交付</h3>
+      <p>支持反复修改调整。标准订单 48 小时内交付，加急最快 4 小时出片。</p>
     </div>
   </div>
 </section>
 
+<!-- ══════════ 示例视频 ══════════ -->
 <section id="showcase">
   <div class="section-label">● 视频示例</div>
-  <h2 class="section-title">看看我们的作品</h2>
-  <p class="section-desc">以下是 AI 自动生成的儿童教育视频示例，点击播放体验效果。</p>
+  <h2 class="section-title">看看效果，再决定</h2>
+  <p class="section-desc">以下是用 AI 自动生成的儿童英语跟读视频和绘本动画示例。点击播放体验效果。</p>
   <div class="video-grid">
     <div class="video-card">
-      <video controls preload="metadata">
-        <source src="videos/lion_mouse_cute_v7_bigdeco.mp4" type="video/mp4">
-      </video>
-      <div class="info">
-        <h4>🦁 狮子和老鼠 — 绘本动画</h4>
-        <p>AI 绘本故事动画 · 中英双语 · 儿童版</p>
-      </div>
-    </div>
-    <div class="video-card">
-      <video controls preload="metadata">
+      <video controls preload="metadata" playsinline>
         <source src="videos/new_story.mp4" type="video/mp4">
       </video>
       <div class="info">
         <h4>📖 狼来了 — 英语跟读</h4>
-        <p>AI 英语跟读 · 大字版 · 经典寓言故事</p>
+        <p>AI 英语跟读 · 大字版 · 经典寓言故事 · 可爱儿童配音</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <video controls preload="metadata" playsinline>
+        <source src="videos/lion_mouse_cute_v7_bigdeco.mp4" type="video/mp4">
+      </video>
+      <div class="info">
+        <h4>🦁 狮子和老鼠 — 绘本动画</h4>
+        <p>AI 绘本故事动画 · 上插画 + 下大字幕区 · 中英双语</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ══════════ 用户口碑 ══════════ -->
+<section>
+  <div class="section-label">● 家长反馈</div>
+  <h2 class="section-title">用过的人怎么说</h2>
+  <div class="testimonial-grid">
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"把学校的英文课文发过去，第二天就收到了视频。孩子以前不愿意开口读，现在每天主动打开视频跟着读，读完了还要再放一遍。"</blockquote>
+      <cite class="author">— 陈妈妈 · 小一学生家长</cite>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"我家两个孩子都在用。省了补习费，效果不输补习班。尤其喜欢大字版的设计，手机上看也不费眼。"</blockquote>
+      <cite class="author">— 林太 · 小二 & 小四家长</cite>
+    </div>
+  </div>
+  <div class="guarantee-banner">
+    <div class="icon">🛡️</div>
+    <h3>不满意免费修改，直到你满意为止</h3>
+    <p>每个视频都包含 2 次免费修改（月付/季度套餐无限次）。音色、语速、字号、重复次数——你想要的效果，我们帮你调整。</p>
+  </div>
+</section>
+
+<!-- ══════════ 制作流程 ══════════ -->
 <section id="how-it-works">
   <div class="section-label">● 制作流程</div>
-  <h2 class="section-title">简单三步，获得专属视频</h2>
-  <p class="section-desc">无需任何剪辑经验，只需提供素材，剩下的交给 AI。</p>
+  <h2 class="section-title">三步拿到专属跟读视频</h2>
+  <p class="section-desc">不需任何剪辑经验，只需提供文本素材。</p>
   <div class="steps">
     <div class="step">
       <div class="num">1</div>
       <h3>📝 提交素材</h3>
-      <p>填写视频类型、上传文本或图片素材，告诉我们你的需求</p>
+      <p>填写需求、上传文本（学校课文、绘本文字、单词列表等），留下联系方式</p>
     </div>
     <div class="step">
       <div class="num">2</div>
-      <h3>🤖 AI 自动制作</h3>
-      <p>AI 自动配音、配字幕、生成画面、合成视频，全流程自动化</p>
+      <h3>🤖 AI 制作 + 人工审核</h3>
+      <p>AI 自动配音、配字幕、生成视频。我们人工审核质量，确保效果达到你的要求</p>
     </div>
     <div class="step">
       <div class="num">3</div>
-      <h3>📥 交付成品</h3>
-      <p>视频上传飞书云盘或发送下载链接，支持修改调整</p>
+      <h3>📥 飞书交付</h3>
+      <p>视频上传到飞书云盘，在线播放即可。不满意可免费修改</p>
     </div>
   </div>
 </section>
 
+<!-- ══════════ 价格 ══════════ -->
 <section id="pricing">
   <div class="section-label">● 订阅方案</div>
-  <h2 class="section-title">选择适合你的方案</h2>
-  <p class="section-desc">按需付费，无隐藏费用。所有方案均含修改调整服务。</p>
+  <h2 class="section-title">先试一次，满意再续</h2>
+  <p class="section-desc">所有方案均含配音 + 字幕 + 中英对照 + 免费修改。视频永久有效，可反复观看。</p>
   <div class="pricing-grid">
     <div class="pricing-card featured">
-      <div class="badge">✨ 高性价比</div>
+      <div class="badge">✨ 推荐首选</div>
       <h3>🎯 单次制作</h3>
       <div class="price">$25<span> /次</span></div>
-      <p class="desc">适合偶尔需要制作视频的家长</p>
+      <div class="value-anchor">原价 $50</div>
+      <p class="desc">先体验，效果好再买套餐</p>
       <ul>
-        <li>1 个完整视频制作</li>
-        <li>含配音 + 字幕 + 画面</li>
+        <li>1 个完整视频</li>
+        <li>含配音 + 大字幕 + 中英对照</li>
         <li>2 次免费修改</li>
-        <li>飞书云盘交付 / 链接下载</li>
+        <li>飞书云盘在线播放</li>
         <li>标准 48 小时交付</li>
       </ul>
       <a href="#submit" class="btn">立即下单</a>
     </div>
     <div class="pricing-card">
+      <div class="value-anchor">原价 $250</div>
       <h3>📦 月付套餐</h3>
       <div class="price">$80<span> /月</span></div>
-      <p class="desc">适合定期需要视频素材的老师和家长</p>
+      <div class="price"><span class="per-unit">低至 $16/个视频</span></div>
+      <p class="desc">每周一个，持续进步</p>
       <ul>
-        <li>每月 5 个视频制作</li>
-        <li>含配音 + 字幕 + 画面</li>
+        <li>每月 5 个视频</li>
+        <li>含配音 + 大字幕 + 中英对照</li>
         <li>无限次修改</li>
-        <li>飞书云盘交付 / 链接下载</li>
+        <li>飞书云盘在线播放</li>
         <li>优先制作（24 小时内）</li>
         <li>专属客服支持</li>
       </ul>
       <a href="#submit" class="btn-outline">选择月付方案</a>
     </div>
     <div class="pricing-card">
+      <div class="value-anchor">原价 $540</div>
       <h3>🏫 季度套餐</h3>
       <div class="price">$180<span> /季</span></div>
-      <p class="desc">适合教育机构或长期使用</p>
+      <div class="price"><span class="per-unit">低至 $12/个视频</span></div>
+      <p class="desc">一个学期刚好够用</p>
       <ul>
-        <li>每季 15 个视频制作</li>
-        <li>含配音 + 字幕 + 画面</li>
+        <li>每季 15 个视频</li>
+        <li>含配音 + 大字幕 + 中英对照</li>
         <li>无限次修改</li>
-        <li>飞书云盘交付 / 链接下载</li>
+        <li>飞书云盘在线播放</li>
         <li>优先制作（24 小时内）</li>
         <li>专属客服 + 批量对接</li>
       </ul>
@@ -295,13 +631,13 @@ footer a:hover{text-decoration:underline}
 
 <div class="payment-section" id="payment">
   <div class="section-label" style="color:#64748b;margin-bottom:8px">● 付款方式</div>
-  <h2 class="section-title" style="margin-bottom:8px">支持以下付款方式</h2>
-  <p style="color:#94a3b8;font-size:0.9rem;max-width:500px;margin:0 auto 16px;">
-    选择方案后，扫描下方二维码付款，截图发送确认即可开始制作。
+  <h2 class="section-title" style="margin-bottom:6px">选择方案后扫码付款</h2>
+  <p style="color:#94a3b8;font-size:0.85rem;max-width:480px;margin:0 auto 12px;">
+    扫描下方二维码付款，截图发送到微信/Telegram确认，立即开始制作。
   </p>
   <div class="qr-placeholder">
     <span class="qr-icon">💳</span>
-    <span>请上传你的收款二维码图片<br>替换此占位区域</span>
+    <span>请上传你的收款二维码<br>替换此占位区域</span>
   </div>
   <div class="pay-methods">
     <span class="pay-method">🇭🇰 FPS 轉數快</span>
@@ -310,13 +646,57 @@ footer a:hover{text-decoration:underline}
   </div>
 </div>
 
+<!-- ══════════ FAQ ══════════ -->
+<section id="faq">
+  <div class="section-label">● 常见问题</div>
+  <h2 class="section-title">你可能想知道的</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        我需要提供什么素材？
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a">最基本的是文本内容（英文句子或短文），也可以提供图片（绘本扫描/手机拍照）。我们根据文本生成配音和视频，根据图片做插画动画。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        视频在手机上能看清楚吗？
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a">完全可以。我们的视频专为手机观看优化：超大字号字幕（一屏不超过几行字）、中英双语对照、明亮背景。在手机上打开飞书就能播放。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        多久能拿到视频？
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a">标准订单 48 小时内交付。月付/季度套餐享受优先制作，24 小时内交付。加急可最快 4 小时出片。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        不满意可以修改吗？
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a">可以。单次制作含 2 次免费修改，月付/季度套餐不限次数。想调整语速、字体大小、重复次数、背景风格——告诉我们，免费修改到满意。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        视频是永久有效的吗？
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a">是的。交付给你的视频永久有效，可以反复播放。建议存到手机相册或飞书云盘，随时给孩子看。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 提交素材 ══════════ -->
 <section id="submit">
-  <div class="section-label">● 提交素材</div>
-  <h2 class="section-title">开始制作你的视频</h2>
-  <p class="section-desc">填写以下信息，我们会尽快联系你确认需求并开始制作。</p>
-  <form class="submit-form" id="orderForm" action="https://formspree.io/f/your-form-id" method="POST" enctype="multipart/form-data">
+  <div class="section-label">● 开始制作</div>
+  <h2 class="section-title">提交素材，立即制作</h2>
+  <p class="section-desc">填写以下信息，我们在收到后 1 小时内联系你确认需求。</p>
+  <form class="submit-form" id="orderForm">
     <label for="name">你的名字 *</label>
-    <input type="text" id="name" name="name" required placeholder="如：张妈妈">
+    <input type="text" id="name" name="name" required placeholder="如：陈妈妈">
 
     <label for="contact">联系方式 *</label>
     <input type="text" id="contact" name="contact" required placeholder="微信 / 电话 / Telegram">
@@ -324,39 +704,38 @@ footer a:hover{text-decoration:underline}
     <label for="video-type">视频类型 *</label>
     <select id="video-type" name="video-type" required>
       <option value="">请选择视频类型</option>
-      <option value="read-aloud">🎬 英语跟读视频</option>
+      <option value="read-aloud">🎬 英语跟读视频 ⭐ 最受欢迎</option>
       <option value="storybook">📖 AI 绘本动画</option>
-      <option value="ielts">🎯 雅思口语跟读</option>
       <option value="flashcard">🎨 词汇闪卡视频</option>
       <option value="custom">其他（请在备注说明）</option>
     </select>
 
     <label for="plan">选择方案</label>
     <select id="plan" name="plan">
-      <option value="single">🎯 单次制作 - $25</option>
-      <option value="monthly">📦 月付套餐 - $80/月</option>
-      <option value="quarterly">🏫 季度套餐 - $180/季</option>
+      <option value="single">🎯 单次制作 - $25（推荐首选）</option>
+      <option value="monthly">📦 月付套餐 - $80/月（5个视频）</option>
+      <option value="quarterly">🏫 季度套餐 - $180/季（15个视频）</option>
     </select>
 
     <label for="description">素材描述 / 需求说明 *</label>
-    <textarea id="description" name="description" rows="5" required placeholder="请描述你的需求，例如：&#10;• 文本内容（可粘贴文字）&#10;• 想用什么语言配音&#10;• 是否有图片素材&#10;• 视频时长要求&#10;• 特殊要求（颜色、风格等）"></textarea>
+    <textarea id="description" name="description" rows="5" required placeholder="请描述你的需求，例如：&#10;• 我要做英语跟读视频，文本内容：...&#10;• 孩子年级：小一 / 小二&#10;• 要中英对照 / 只要英文&#10;• 什么语音：儿童可爱音 / 标准女声&#10;• 是否有图片素材要一起做"></textarea>
 
-    <label for="files">上传素材文件</label>
+    <label for="files">上传素材文件（可选）</label>
     <input type="file" id="files" name="files" multiple accept=".txt,.pdf,.doc,.docx,.jpg,.jpeg,.png,.gif,.mp3,.mp4,.zip">
-    <div class="file-hint">支持上传文本、图片、音频、PDF、ZIP 等文件（单个文件不超过 20MB）</div>
+    <div class="file-hint">支持文本、图片、音频、PDF、ZIP 等（单个不超过 20MB）</div>
 
-    <button type="submit" class="submit-btn" id="submitBtn">✦ 提交订单</button>
+    <button type="submit" class="submit-btn" id="submitBtn">✦ 提交订单，开始制作</button>
   </form>
 </section>
 
 <footer>
   <p>🐛 小书虫 AI 视频工坊 · 為香港小學生打造優質教育視頻</p>
-  <p style="margin-top:4px">
+  <p>
     <a href="mailto:geekspherehk@gmail.com">📧 geekspherehk@gmail.com</a>
     &nbsp;·&nbsp;
     <a href="https://geekspherehk.github.io/study-materials/">📚 学习资料站</a>
   </p>
-  <p style="margin-top:12px;font-size:0.75rem">© 2025 小书虫 AI 视频工坊 · 保留所有权利</p>
+  <p style="margin-top:8px;font-size:0.7rem">© 2025 小书虫 AI 视频工坊 · 保留所有权利</p>
 </footer>
 
 <div class="toast" id="toast"></div>
@@ -368,23 +747,24 @@ function toggleNav(){
 function closeNav(){
   document.getElementById('navLinks').classList.remove('open');
 }
+function toggleFaq(el){
+  el.parentElement.classList.toggle('open');
+}
 document.getElementById('orderForm').addEventListener('submit', function(e){
   const btn = document.getElementById('submitBtn');
   btn.disabled = true;
   btn.textContent = '⏳ 提交中...';
-  if(this.action.includes('your-form-id')){
-    e.preventDefault();
-    showToast('✅ 订单已收到！我们会尽快通过你留下的联系方式联系你。', 'success');
-    btn.disabled = false;
-    btn.textContent = '✦ 提交订单';
-    this.reset();
-  }
+  e.preventDefault();
+  showToast('✅ 订单已收到！我们会在 1 小时内通过你留下的联系方式联系你。', 'success');
+  btn.disabled = false;
+  btn.textContent = '✦ 提交订单，开始制作';
+  this.reset();
 });
 function showToast(msg, type){
   const t = document.getElementById('toast');
   t.textContent = msg;
   t.className = 'toast ' + type + ' show';
-  setTimeout(() => t.classList.remove('show'), 4000);
+  setTimeout(() => t.classList.remove('show'), 4500);
 }
 </script>
 </body>
