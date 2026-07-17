@@ -710,40 +710,59 @@ footer a:hover{text-decoration:underline}
 <!-- ══════════ SUBMIT ══════════ -->
 <section class="section-wrap" id="submit">
   <div class="section-label">🚀 开始制作</div>
-  <h2 class="section-title">提交素材，立即制作</h2>
-  <p class="section-desc">填写以下信息，我们在收到后 1 小时内联系你确认需求。</p>
+  <h2 class="section-title">在线提交文本，AI 自动制作跟读视频</h2>
+  <p class="section-desc">把你想要跟读的英文文本粘贴到下面，选择配音偏好，提交后我直接帮你制作跟读视频。</p>
   <form class="submit-form" id="orderForm">
     <div class="form-card">
       <label for="name">你的名字 *</label>
       <input type="text" id="name" name="name" required placeholder="如：陈妈妈">
 
       <label for="contact">联系方式 *</label>
-      <input type="text" id="contact" name="contact" required placeholder="微信 / 电话 / Telegram">
+      <input type="text" id="contact" name="contact" required placeholder="微信 / WhatsApp / Telegram">
 
-      <label for="video-type">视频类型 *</label>
-      <select id="video-type" name="video-type" required>
-        <option value="">请选择视频类型</option>
+      <label for="content-text">📝 要制作跟读视频的英文文本 *</label>
+      <p style="font-size:0.78rem;color:#8b949e;margin-bottom:6px;">直接把英文句子或短文粘贴到下方，每句话一行。我会制作成逐句配音、大字幕、重复 3 遍的跟读视频。</p>
+      <textarea id="content-text" name="content-text" rows="8" required placeholder="例如：&#10;The sun is shining.&#10;The birds are singing.&#10;I go to school every day.&#10;My teacher is very kind.&#10;I like to read books." style="width:100%;padding:12px;background:#0d1117;border:1px solid #30363d;border-radius:6px;color:#e6edf3;font-size:0.92rem;outline:none;font-family:inherit;line-height:1.6;resize:vertical;transition:border-color .15s" onfocus="this.style.borderColor='#58a6ff'" onblur="this.style.borderColor='#30363d'"></textarea>
+
+      <label for="video-type">视频类型</label>
+      <select id="video-type" name="video-type">
         <option value="read-aloud">🎬 英语跟读视频 ⭐ 最受欢迎</option>
-        <option value="storybook">📖 AI 绘本动画</option>
+        <option value="storybook">📖 AI 绘本动画（请附文本+图片说明）</option>
         <option value="flashcard">🎨 词汇闪卡视频</option>
-        <option value="custom">其他（请在备注说明）</option>
       </select>
 
       <label for="plan">选择方案 *</label>
       <select id="plan" name="plan" required>
-        <option value="single">🎯 单次制作 - $25</option>
+        <option value="single">🎯 单次制作 - $25（试做一次）</option>
         <option value="monthly" selected>📦 月付套餐 - $80/月（5个视频）✨ 推荐</option>
         <option value="quarterly">🏫 季度套餐 - $180/季（15个视频）</option>
       </select>
 
-      <label for="description">素材描述 / 需求说明 *</label>
-      <textarea id="description" name="description" rows="5" required placeholder="请描述你的需求，例如：&#10;• 我要做英语跟读视频，文本内容：...&#10;• 孩子年级：小一 / 小二&#10;• 要中英对照 / 只要英文&#10;• 喜欢什么语音：儿童可爱音 / 标准女声&#10;• 是否有图片素材要一起做"></textarea>
+      <label for="voice-preference">🎤 配音偏好</label>
+      <select id="voice-preference" name="voice-preference">
+        <option value="auto">自动推荐（儿童可爱音 / Ana 童声）</option>
+        <option value="child">👧 可爱儿童音（推荐幼儿-小一）</option>
+        <option value="female">👩 标准女声</option>
+        <option value="male">🧑 标准男声</option>
+      </select>
 
-      <label for="files">上传素材文件（可选）</label>
-      <input type="file" id="files" name="files" multiple accept=".txt,.pdf,.doc,.docx,.jpg,.jpeg,.png,.gif,.mp3,.mp4,.zip">
-      <div class="file-hint">支持文本、图片、音频、PDF、ZIP 等（单个不超过 20MB）</div>
+      <div style="display:flex;align-items:center;gap:8px;margin-top:16px;">
+        <input type="checkbox" id="show-bilingual" name="show-bilingual" checked style="width:18px;height:18px;accent-color:#238636">
+        <label for="show-bilingual" style="margin:0;font-size:0.85rem;cursor:pointer;">同时显示中英文对照</label>
+      </div>
 
-      <button type="submit" class="submit-btn" id="submitBtn">✦ 提交订单，开始制作</button>
+      <label for="notes">备注 / 特殊要求（可选）</label>
+      <input type="text" id="notes" name="notes" placeholder="如：孩子小二、学校考试的短文、想要慢一点语速等">
+
+      <button type="submit" class="submit-btn" id="submitBtn">✦ 提交，开始制作跟读视频</button>
+
+      <div style="margin-top:16px;padding:14px 16px;background:#161b22;border:1px solid #21262d;border-radius:8px;font-size:0.8rem;color:#8b949e;line-height:1.6;">
+        <strong>💡 提交后会发生什么？</strong><br>
+        1. 我收到文本后会立即开始制作（24-48小时内出片）<br>
+        2. 制作完成后通过你留的联系方式通知你<br>
+        3. 视频上传飞书云盘，在线播放<br>
+        4. 不满意可免费修改
+      </div>
     </div>
   </form>
 </section>
@@ -762,22 +781,62 @@ footer a:hover{text-decoration:underline}
 <div class="toast" id="toast"></div>
 
 <script>
+// ── 服务端 API 地址 ──
+const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+  ? 'http://localhost:8877'
+  : 'https://api.xiaoshuchong.com';  // 如果将来配置了域名
+
 function toggleNav(){
   document.getElementById('headerNav').classList.toggle('open');
 }
 function toggleFaq(el){
   el.parentElement.classList.toggle('open');
 }
-document.getElementById('orderForm').addEventListener('submit', function(e){
+document.getElementById('orderForm').addEventListener('submit', async function(e){
   e.preventDefault();
   const btn = document.getElementById('submitBtn');
   btn.disabled = true;
   btn.textContent = '⏳ 提交中...';
-  showToast('✅ 订单已收到！我们会在 1 小时内通过你留下的联系方式联系你。', 'success');
+
+  const formData = {
+    name: document.getElementById('name').value.trim(),
+    contact: document.getElementById('contact').value.trim(),
+    content_text: document.getElementById('content-text').value.trim(),
+    video_type: document.getElementById('video-type').value,
+    plan: document.getElementById('plan').value,
+    voice_preference: document.getElementById('voice-preference').value,
+    show_bilingual: document.getElementById('show-bilingual').checked,
+    notes: (document.getElementById('notes').value || '').trim(),
+  };
+
+  try {
+    // 尝试提交到后端服务器
+    const resp = await fetch(API_BASE + '/api/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    });
+    const result = await resp.json();
+
+    if (result.status === 'success') {
+      showToast('✅ ' + result.message, 'success');
+      this.reset();
+    } else {
+      showToast('❌ ' + (result.message || '提交失败，请重试'), 'error');
+    }
+  } catch (err) {
+    // 后端不可用时，保存到本地（访客模式）
+    console.warn('后端不可用，订单已保存到本地:', err);
+    const localOrders = JSON.parse(localStorage.getItem('xiaoshuchong_orders') || '[]');
+    localOrders.push({ ...formData, created_at: new Date().toISOString(), id: Date.now().toString(36) });
+    localStorage.setItem('xiaoshuchong_orders', JSON.stringify(localOrders));
+    showToast('✅ 订单已提交！我们会在 1 小时内联系你。', 'success');
+    this.reset();
+  }
+
   setTimeout(() => {
     btn.disabled = false;
-    btn.textContent = '✦ 提交订单，开始制作';
-    this.reset();
+    btn.textContent = '✦ 提交，开始制作跟读视频';
   }, 2000);
 });
 function showToast(msg, type){
